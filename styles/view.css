@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.show-items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.container{
+    min-width: 20vh;
+    max-width: 38vh;
+    min-height: 60vh;
+    flex-direction: column;
+    display: flex;
+    overflow: hidden;
+    border: 1px solid;
+}
+
+.image{
+    height: 40vh;
+    width: 40vh;
+}

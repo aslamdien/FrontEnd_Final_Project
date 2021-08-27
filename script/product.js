@@ -1,3 +1,11 @@
+function getUser(){
+    const user = JSON.parse(localStorage.getItem("user"))
+    console.log(user)
+    document.querySelector('#greeting').innerHTML = `Welcome Back ${user.data.username}`
+    
+}
+getUser();
+
 function showProductList() {
     fetch("https://evening-fjord-01909.herokuapp.com/show-products/")
       // Convert data from JSON

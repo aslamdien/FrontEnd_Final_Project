@@ -16,7 +16,7 @@ function login(){
     .then((res) => res.json())
     .then((res) => {
         console.log(res);
-        if (res.data.length == 0) {
+        if (!res.data) {
             alert('Incorrect Username Or Password');
         }
         else{

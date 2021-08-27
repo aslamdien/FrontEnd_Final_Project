@@ -9,9 +9,15 @@
 </head>
 <body>
     <div id="filters">
-        <button onclick="filter('HardDrive')" class="items">HardDrive</button>
-        <button onclick="filter('MotherBoard')" class="items">MotherBoard</button>
-        <button onclick="filter('KeyBoard')" class="items">KeyBoard</button>
+        <button onclick="productFilter('All')" class="items">All</button>
+        <button onclick="productFilter('HardDrive')" class="items">HardDrive</button>
+        <button onclick="productFilter('MotherBoard')" class="items">MotherBoard</button>
+        <button onclick="productFilter('KeyBoard')" class="items">KeyBoard</button>
+    </div>
+    <div><form onsubmit="event.preventDefault(), searchProduct()">
+        <input type="text" id="search" placeholder="Search...">
+        <button type="submit">Search</button>
+    </form>
     </div>
     <div class="show-items"></div>
     <script src="./script/view.js"></script>

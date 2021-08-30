@@ -5,11 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/product.css">
+    <script src="https://kit.fontawesome.com/4d777e0ebe.js" crossorigin="anonymous"></script>
     <title>Admin</title>
 </head>
 <body>
     <div class="opening">
         <h2 id="greeting"></h2>
+    </div>
+    <div id="add">
+      <button onclick="button('added')">Add Product</button>
+      <button onclick="button('update')">Edit Product</button>
     </div>
     <div id="filters">
         <button onclick="productFilter('All')" class="items">All</button>
@@ -17,6 +22,45 @@
         <button onclick="productFilter('MotherBoard')" class="items">MotherBoard</button>
         <button onclick="productFilter('KeyBoard')" class="items">KeyBoard</button>
     </div>
+    <div id="added">
+        <div>
+          <i class="fas fa-reply" onclick="button('added')"></i>
+          <div class="adding table">
+            <form class="addproduct">
+              <h3>Add Product</h3>
+              <table>
+                <tr>
+                  <td>
+                    <input class="product-info" type="text" name="title" id="title" placeholder="Product Title" required/>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input class="product-info" type="text" name="price" id="price" placeholder="Price" required/>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input class="product-info" type="file" name="image" id="image" onchange="previewFile()" placeholder="Image" required/>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input class="product-info" name="type" id="type"placeholder="Type"required></input>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="product-btn" onclick="event.preventDefault(), addproduct()">Add Product</button>
+                  </td>
+                </tr>
+              </table>
+            </form>
+          </div>
+          <img src="" class="imageup"/>
+        </div>
+      </div>
+    <div class="carts"></div>
     <div class="show-items"></div>
     <script src="./script/admin.js"></script>
 </body>

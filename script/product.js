@@ -25,6 +25,7 @@ function showProductList() {
           <h3 class="info">${item.title}</h3>
           <p class="info">${item.type}</p>
           <p class="info"><strong>R${item.price}</strong></p>
+          <button onclick="event.preventDefault(); addTocart(${item.id})">Add to Cart</button>
           </div>`;
         });
       });
@@ -52,4 +53,58 @@ function showProductList() {
     for(let i = 0; i < selectedProducts.length; i++){
         selectedProducts[i].style.display = "flex"
     }
+}
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Add to Cart<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+function addTocart(id) {
+  fetch(`https://evening-fjord-01909.herokuapp.com/view-product/${id}`, {
+    method: "GET",
+    body: JSON.stringify(),
+    headers: {
+      "content-type": "application/json",
+    },
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
+      let idNo = `${data.data[0]}`;
+      let title = `${data.data[1]}`;
+      let pic = `${data.data[2]}`;
+      let type = `${data.data[4]}`;
+      let price = `${data.data[3]}`;
+      console.log(title);
+      addToPlate(idNo, title, pic, type, price);
+    });
+}
+
+function addToPlate(idNo, name, pic, type, price) {
+  let platediv = document.createElement("div");
+  platediv.classList.add("viewcart_items");
+  let plateItems = document.getElementsByClassName("carts")[0];
+  let plateItemName = plateItems.getElementsByClassName("cart_name");
+  for (let i = 0; i < plateItemName.length; i++) {
+    if (plateItemName[i].innerText == name) {
+      alert("You already added to your plate");
+      return;
+    }
+  }
+  let PlateContent = `<div class="container">
+  <img class="info image" src="${pic}" alt="image"/>
+  <h2 class="info">${name}</h2>
+  <p class="info">${type}</p>
+  <p class="info"><strong>R${price}</strong></p>
+  <button class ="rmbtn" onclick="removeFromCart()">Remove</button>`;
+  platediv.innerHTML = PlateContent;
+  plateItems.append(platediv);
+}
+
+function removeFromCart() {
+  let removePlate = document.getElementsByClassName("rmbtn");
+  for (let i = 0; i < removePlate.length; i++) {
+    let button = removePlate[i];
+    button.addEventListener("click", function (event) {
+      let remBtn = event.target;
+      remBtn.parentElement.parentElement.remove();
+    });
+  }
 }

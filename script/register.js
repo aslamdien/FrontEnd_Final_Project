@@ -40,7 +40,7 @@ function register(){
             alert('ID Number Not Valid')
         }
         else if (res['message'] == 'This username has been taken') {
-            alert('Sorry, Username Has Taken')
+            alert('Sorry, Username Has Been Taken')
         }
         else {
             alert('You Are Registered')

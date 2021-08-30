@@ -32,10 +32,20 @@ body{
     display: flex;
     overflow: hidden;
     border: 1px solid;
-    flex-wrap: wrap;
+    padding: 5px;
 }
 
 .image{
     height: 40vh;
     width: 40vh;
 }
+
+#added {
+    display: none;
+    position: sticky;
+}
+  
+  #added.active {
+    display: flex;
+    
+  }

@@ -12,7 +12,11 @@
             <h3>Log In</h3>
             <input type="text" name="username" id="username" placeholder="username" required>
             <input type="password" name="password" id="password" placeholder="password" required>
-            <button type="submit">Submit</button>
+            <div class="showpass">
+                <p>Show Password!</p>
+                <input class="tick" type="checkbox" onclick="show_password()"/>
+              </div>
+            <button type="submit">Log In</button>
             <span id="error"></span>
         </form>
     </div>

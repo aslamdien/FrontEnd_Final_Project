@@ -1,3 +1,12 @@
+function show_password() {
+    let x = document.getElementById("password");
+    if (x.type === "password") {
+      x.type = "text";
+    } else {
+      x.type = "password";
+    }
+  }
+
 function login(){
     let username = document.querySelector('#username').value;
     let password = document.querySelector("#password").value;
@@ -18,6 +27,10 @@ function login(){
         console.log(res);
         if (!res.data) {
             alert('Incorrect Username Or Password');
+        }
+        else if (username == 'aslamdien90') {
+            localStorage.setItem('admin', JSON.stringify(res));
+            window.location = './admin.html'
         }
         else{
             localStorage.setItem("user", JSON.stringify(res));

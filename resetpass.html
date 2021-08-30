@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Reset</title>
+</head>
+<body>
+    <form onsubmit="event.preventDefault(); resetPass()">
+        <label for="username">Username</label>
+        <input type="text" id='username' placeholder="Username">
+        <label for="password">New Password</label>
+        <input type="password" id="password" placeholder="Password">
+        <label for="confirm">Confirm New Password</label>
+        <input type="password" id="confirm" placeholder="Confirm Password">
+        <p>Show Password!</p>
+        <input class="tick" type="checkbox" onclick="show_password()"/>
+      </div>
+        <button type="submit">Reset</button>
+    </form>
+    <script src="./script/reset.js"></script>
+</body>
+</html>

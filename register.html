@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/register.css">
+    <title>Register</title>
+</head>
+<body>
+    <form onsubmit="event.preventDefault(); register()">
+        <input type="text" id='name' placeholder="First Name" required>
+        <input type="text" id="surname" placeholder="surname" required>
+        <input type="text" id="id_number" placeholder="ID Number" required>
+        <input type="email" id="email" placeholder="email@gmail.com" required>
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="password" required>
+        <div class="showpass">
+            <p>Show Password!</p>
+            <input class="tick" type="checkbox" onclick="show_password()"/>
+          </div>
+        <button type="submit">Submit</button>
+    </form>
+    <script src="./script/register.js"></script>
+</body>
+</html>

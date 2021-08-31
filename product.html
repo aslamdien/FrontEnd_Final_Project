@@ -5,11 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/product.css">
-    <title>Document</title>
+    <title>Tech Town</title>
 </head>
 <body>
     <div class="opening">
         <h2 id="greeting"></h2>
+    </div>
+    <div>
+    <button onclick="button('cart')">Cart</button>
     </div>
     <div id="filters">
         <button onclick="productFilter('All')" class="items">All</button>
@@ -17,6 +20,13 @@
         <button onclick="productFilter('MotherBoard')" class="items">MotherBoard</button>
         <button onclick="productFilter('KeyBoard')" class="items">KeyBoard</button>
     </div>
+    <div id="cart">
+        <div class="viewcart">
+          <div class="carts">
+              <div class="total"></div>
+          </div>
+        </div>
+      </div>
     <div class="show-items"></div>
     <script src="./script/product.js"></script>
 </body>

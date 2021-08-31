@@ -24,10 +24,13 @@ function showProductList() {
           view.innerHTML += `<div class="container" type=${item.type}>
           <img class="info image" src="${item.image}" alt="image"/>
           <p class="info">ID: ${item.id}</p>
-          <h3 class="info">${item.title}</h3>
+          <h4 class="info">${item.title}</h4>
           <p class="info">${item.type}</p>
           <p class="info"><strong>R${item.price}</strong></p>
-          <button onclick="event.preventDefault(); deleteProduct(${item.id})">Delete</button>
+          <div class="btn">
+          <button onclick="event.preventDefault(), deleteProduct(${item.id})">Delete</button>
+          <button onclick="event.preventDefault(), updateProduct(${item.id})">Update</button>
+          </div>
           </div>`;
         });
       });
@@ -59,10 +62,29 @@ function showProductList() {
     }
 }
 
-//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 function previewFile() {
   const image = document.querySelector(".imageup");
   const file = document.querySelector("#image").files[0];
+  const reader = new FileReader();
+
+  reader.addEventListener(
+    "load",
+    function () {
+      // convert image file to base64 string
+      image.src = reader.result;
+    },
+    false
+  );
+
+  if (file) {
+    reader.readAsDataURL(file);
+  }
+}
+
+function previewFiles() {
+  const image = document.querySelector(".imageups");
+  const file = document.querySelector("#images").files[0];
   const reader = new FileReader();
 
   reader.addEventListener(
@@ -99,8 +121,8 @@ function addproduct() {
       }),
     })
       .then((res) => res.json)
-      .then((data) => {
-        console.log(data);
+      .then((res) => {
+        console.log(res);
         console.log("success");
         window.location.reload();
       })
@@ -137,3 +159,40 @@ function deleteProduct(item) {
 function button(id) {
   document.getElementById(id).classList.toggle("active");
 }
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Update<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+function updateProduct(id) {
+  fetch('https://evening-fjord-01909.herokuapp.com/show-products/')
+  .then((res) => res.json())
+  .then(data => {
+    let products = data.data
+    let updateProduct = products.find((item) => {
+      return item.id == id
+    })
+  let title = document.querySelector('#title1').value
+  let price = document.querySelector('#price1').value
+  let type = document.querySelector('#type1').value
+  if (confirm('Are you sure?')){
+    fetch(`https://evening-fjord-01909.herokuapp.com/edit-product/${id}`,{
+      method:'PUT',
+      body:JSON.stringify({
+        title:title,
+        price:price,
+        type:type
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      }
+    })
+    .then((res) => res.json)
+    .then((res) => {
+      console.log(res)
+      window.location.reload();
+    })
+  }
+  else{
+    console.log('update cancelled')
+  }
+  })
+}
+

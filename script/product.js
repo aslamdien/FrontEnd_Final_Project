@@ -67,36 +67,36 @@ function addTocart(id) {
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
-      let idNo = `${data.data[0]}`;
       let title = `${data.data[1]}`;
       let pic = `${data.data[2]}`;
       let type = `${data.data[4]}`;
       let price = `${data.data[3]}`;
-      console.log(title);
-      addToPlate(idNo, title, pic, type, price);
+      addToPlate(title, pic, type, price);
     });
 }
 
-function addToPlate(idNo, name, pic, type, price) {
+function addToPlate(title, pic, type, price) {
   let platediv = document.createElement("div");
   platediv.classList.add("viewcart_items");
   let plateItems = document.getElementsByClassName("carts")[0];
-  let plateItemName = plateItems.getElementsByClassName("cart_name");
+  let plateItemName = plateItems.getElementsByClassName("plate_item_name");
   for (let i = 0; i < plateItemName.length; i++) {
-    if (plateItemName[i].innerText == name) {
+    if (plateItemName[i].innerText == title) {
       alert("You already added to your plate");
       return;
     }
   }
   let PlateContent = `<div class="container">
   <img class="info image" src="${pic}" alt="image"/>
-  <h2 class="info">${name}</h2>
+  <h2 class="info">${title}</h2>
   <p class="info">${type}</p>
   <p class="info"><strong>R${price}</strong></p>
   <button class ="rmbtn" onclick="removeFromCart()">Remove</button>`;
   platediv.innerHTML = PlateContent;
   plateItems.append(platediv);
 }
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>removeCart<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 function removeFromCart() {
   let removePlate = document.getElementsByClassName("rmbtn");
@@ -107,4 +107,9 @@ function removeFromCart() {
       remBtn.parentElement.parentElement.remove();
     });
   }
+}
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+function button(id) {
+  document.getElementById(id).classList.toggle("active");
 }

@@ -7,6 +7,7 @@
 body{
     display: flex;
     flex-direction: column;   
+    justify-content: center;
 }
 
 #filters{
@@ -19,7 +20,6 @@ body{
 .show-items{
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
     gap: 10px;
 }
@@ -27,25 +27,48 @@ body{
 .container{
     min-width: 20vh;
     max-width: 38vh;
-    min-height: 60vh;
+    height: 60vh;
     flex-direction: column;
     display: flex;
     overflow: hidden;
     border: 1px solid;
     padding: 5px;
+    gap:4px
 }
 
 .image{
-    height: 40vh;
+    height: 35vh;
     width: 40vh;
 }
 
 #added {
     display: none;
-    position: sticky;
 }
   
-  #added.active {
+#added.active {
     display: flex;
-    
-  }
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#update {
+    display: none;
+}
+  
+#update.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.product-info{
+    height: 5vh;
+}
+
+.imageup{
+    height: 20vh;
+    width: 20vh;
+}

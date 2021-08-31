@@ -28,40 +28,46 @@
           <div class="adding table">
             <form class="addproduct">
               <h3>Add Product</h3>
-              <table>
-                <tr>
-                  <td>
-                    <input class="product-info" type="text" name="title" id="title" placeholder="Product Title" required/>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <input class="product-info" type="text" name="price" id="price" placeholder="Price" required/>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <input class="product-info" type="file" name="image" id="image" onchange="previewFile()" placeholder="Image" required/>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <input class="product-info" name="type" id="type"placeholder="Type"required></input>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <button class="product-btn" onclick="event.preventDefault(), addproduct()">Add Product</button>
-                  </td>
-                </tr>
-              </table>
+              <input class="product-info" type="text" name="title" id="title" placeholder="Product Title" required/>
+            <br>
+              <input class="product-info" type="text" name="price" id="price" placeholder="Price" required/>
+            <br>
+              <input class="product-info" type="file" name="image" id="image" onchange="event.preventDefault(), previewFile()" placeholder="Image" required/>
+            <br>               
+              <input class="product-info" name="type" id="type"placeholder="Type"required></input>
+            <br>
+              <button class="product-btn" onclick="event.preventDefault(), addproduct()">Add</button>
             </form>
           </div>
           <img src="" class="imageup"/>
         </div>
       </div>
-    <div class="carts"></div>
+      <br>
+      <div id="update">
+        <div>
+          <i class="fas fa-reply" onclick="button('update')"></i>
+          <div class="upadate table">
+            <form class="update">
+              <h3>Update Product</h3>
+              <input class="product-info" type="text" id="title1" placeholder="Product Title" required/>
+            <br>
+              <input class="product-info" type="text" id="price1" placeholder="Price" required/>
+            <br>
+              <input class="product-info" type="file" id="images" onchange="event.preventDefault(), previewFiles()" placeholder="Image" />
+            <br>               
+              <input class="product-info" type="text" id="type1" placeholder="Type" required/>
+            </form>
+          </div>
+          <img src="" class="imageups" height="40vh" width="40vh"/>
+        </div>
+      </div>
+      <br>
     <div class="show-items"></div>
+    <footer>
+      <div>
+        <h3>Made by Me</h3>
+      </div>
+    </footer>
     <script src="./script/admin.js"></script>
 </body>
 </html>

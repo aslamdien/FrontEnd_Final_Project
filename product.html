@@ -11,8 +11,10 @@
     <div class="opening">
         <h2 id="greeting"></h2>
     </div>
+    
     <div>
-    <button onclick="button('cart')">Cart</button>
+    <button onclick="logOut()">Log Out</button>
+    <button onclick="window.location=('./cart.html')">Cart</button>
     </div>
     <div id="filters">
         <button onclick="productFilter('All')" class="items">All</button>
@@ -21,8 +23,6 @@
         <button onclick="productFilter('KeyBoard')" class="items">KeyBoard</button>
     </div>
     <div id="cart">
-        <div class="viewcart">
-          <div class="carts">
               <div class="total"></div>
           </div>
         </div>

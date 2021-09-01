@@ -1,28 +1,28 @@
-function showProductList() {
-    fetch("https://evening-fjord-01909.herokuapp.com/show-products/")
+let products = []
+fetch("https://evening-fjord-01909.herokuapp.com/show-products/")
       // Convert data from JSON
       .then((res) => res.json())
       //Stuff to do with data
       .then((data) => {
         // Console log to make sure I am getting the data
-        console.log(data);
-  
-        product = data.data;
-        console.log(product);
-  
-        let view = document.querySelector(".show-items");
-        product.forEach((item) => {
-          view.innerHTML += `<div class="container" type=${item.type}>
+      console.log(data);
+      products = data.data;
+      showProductList(products);
+      })
+
+function showProductList(products) {
+    let view = document.querySelector(".show-items");
+      products.forEach((item) => {
+        view.innerHTML += `<div class="container" type=${item.type}>
           <img class="info image" src="${item.image}" alt="image"/>
           <h3 class="info">${item.title}</h3>
           <p class="info">${item.type}</p>
           <p class="info"><strong>R${item.price}</strong></p>
+          <button onclick="loginUser(${item.id})">Add to Cart</button>
           </div>`;
         });
-      });
-  }
+};
 
-  showProductList();
 
   function productFilter(type){
     // Display All Types
@@ -44,4 +44,9 @@ function showProductList() {
     for(let i = 0; i < selectedProducts.length; i++){
         selectedProducts[i].style.display = "flex"
     }
+}
+
+function loginUser(){
+ alert('You Have To Log In To Purchase');
+ window.location = './login.html'
 }

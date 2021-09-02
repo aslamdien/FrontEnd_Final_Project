@@ -9,7 +9,7 @@ function getUser(){
     else{
       document.querySelector('#greeting').innerHTML = `Welcome Back ${user.data.name}`
     }
-  }
+}
 getUser();
 
 fetch("https://evening-fjord-01909.herokuapp.com/show-products/")
@@ -17,14 +17,15 @@ fetch("https://evening-fjord-01909.herokuapp.com/show-products/")
       .then((res) => res.json())
       //Stuff to do with data
       .then((data) => {
-        // Console log to make sure I am getting the data
+      // Console log to make sure I am getting the data
       console.log(data);
       products = data.data;
       showProductList(products);
       })
 
-function showProductList(products) {
+function showProductList(item) {
     let view = document.querySelector(".show-items");
+    view.innerHTML = ''
       products.forEach((item) => {
         view.innerHTML += `<div class="container" type=${item.type}>
           <img class="info image" src="${item.image}" alt="image"/>
@@ -104,6 +105,7 @@ function addTocart(id){
     alert('You Are Not Log In')
     window.location = './login.html'
   }
+  
   else {
   cart.push(product);
   console.log(cart);

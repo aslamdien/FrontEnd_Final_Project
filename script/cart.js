@@ -1,23 +1,60 @@
-const cart = JSON.parse(localStorage.getItem('cart'))
+let products = []
+let user = JSON.parse(localStorage.getItem('user'))
+products = JSON.parse(localStorage.getItem('cart'))
 const total = JSON.parse(localStorage.getItem('total')) 
+console.log(user)
 
 function cartItems(){
-console.log(cart,total);
-if (cart == null, total == null) {
-    document.querySelector('#cartItems').innerHTML = 'You Have No Items'
-    console.log(cart)
+let view = document.querySelector('#cartItems')
+let payment = document.querySelector('#total')    
+console.log(products,total);
+if (products == null, total ==null) {
+    view.innerHTML = 'You Have No Items In Cart'
+    payment.innerHTML = ''
+    document.getElementById('checkout').style.display = 'none'
+}
+else if (products.length == 0) {
+    view.innerHTML = 'You Have No Items In Cart'
+    payment.innerHTML = ''
+    document.getElementById('checkout').style.display = 'none'
 }
 else{
-    let view = document.querySelector('#cartItems'
-    forEach((item) => {
-        view.innerHTML +=  `
+    products.forEach((item) => {
+    view.innerHTML +=  `
     <div class="container">
-    <img class="info image" src="${cart.image}" alt="image"/>
-    <h2 class="info">${cart.title}</h2>
-    <p class="info">${cart.type}</p>
-    <p class="info"><strong>R${cart.price}</strong></p>
-    <button class ="rmbtn" onclick="removeFromCart()">Remove</button>
+    <img class="image" src="${item.image}" alt="image"/>
+    <h4 class="title">${item.title}</h4>
+    <p class="type">${item.type}</p>
+    <p class="price"><strong>R${item.price}</strong></p>
+    <button class ="rmbtn" onclick="removeProduct(${item.id})">Remove</button>
     </div>` 
-}
+   })
+   payment.innerHTML =`Your Total Comes To R${total}`
+  }
 }
 cartItems();
+
+function removeProduct(id) {
+    let cart = []
+    let productLeft = products.filter(item => item.id != id)
+    localStorage.setItem('cart', JSON.stringify(productLeft))
+    cart = JSON.parse(localStorage.getItem('cart'))
+    let newPrice = cart.reduce((total, item) => total + parseInt(item.price), 0)
+    localStorage.setItem('total', newPrice)
+    document.querySelector('#total').innerHTML = 'R'+newPrice
+    window.location.reload()
+}
+
+function checkOut(){
+	Email.send({
+	Host: "smtp.gmail.com",
+	Username : "081698work@gmail.com",
+	Password : "open@123",
+	To : `${user.data.email}`,
+	From : "081698work@gmail.com",
+	Subject : "Test",
+	Body : `${product.id}`,
+	}).then(
+		message => alert("mail test sent successfully")
+	);
+}

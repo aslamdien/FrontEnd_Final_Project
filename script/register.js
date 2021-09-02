@@ -44,6 +44,7 @@ function register(){
         }
         else {
             alert('You Are Registered')
+            window.location = './login.html'
         }
     })
 }

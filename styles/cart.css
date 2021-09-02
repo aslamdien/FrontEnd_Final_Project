@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;   
+    justify-content: center;
+}
+
+#cartItems{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 5% 10%;
+    gap: 10px;
+}
+
+.container{
+    min-width: 20vh;
+    max-width: 38vh;
+    max-height: 60vh;
+    min-height: 30vh;
+    flex-direction: column;
+    display: flex;
+    overflow: hidden;
+    border: 1px solid;
+    padding: 5px;
+    gap:4px
+}
+
+.image{
+    min-height: 20vh;
+    max-height: 35vh;
+    max-width: 40vh;
+    min-width: 20vh;
+}

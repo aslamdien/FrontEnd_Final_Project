@@ -9,6 +9,12 @@ body{
     display: flex;
     flex-direction: column;   
     justify-content: center;
+    padding-top: 5%;
+    background: url(../images/rDnqjL.png) fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
 #filters{
@@ -31,21 +37,31 @@ body{
     max-width: 38vh;
     max-height: 60vh;
     min-height: 30vh;
+    background: url(../images/image.jpg);
     flex-direction: column;
     display: flex;
     overflow: hidden;
     border: 1px solid;
     padding: 5px;
-    gap:4px
+    gap:4px;
+    transition: all 0.2s linear;
+}
+
+.container:hover{
+    max-width: 40vh;
+    max-height: 65vh;
 }
 
 .image{
     min-height: 20vh;
-    max-height: 40vh;
-    max-width: 40vh;
+    max-height: 41vh;
+    max-width: 41vh;
     min-width: 20vh;
 }
 
+.info{
+    color: white;
+}
 .heading{
     position: fixed;
     top: 0;
@@ -53,22 +69,44 @@ body{
     left: 0;
     bottom: 0;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    background: rgba( 113, 147, 138, 0.15 );
+    background: rgba(132, 156, 190, 0.589);
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 4px );
     max-height: 7vh;
     min-height: 3vh;
+    padding: 2%;
     align-items: center;
 }
 
 #name{
     font-family: 'Audiowide', cursive;
-    color: black;
+    color: white;
     font-size: 7vh;
 }
- .log{
+.log{
      display: flex;
-     gap: 5px;
+     gap: 10px;
+ }
+
+ .link{
+     text-decoration-line:none ;
+     color: white;
+ }
+
+ .link:hover{
+    background: linear-gradient(145deg, #778cab, #8da7cb);           
+ }
+
+ .foot{
+     position: fixed;
+     top: 10;
+     right: 0;
+     left: 0;
+     bottom: 0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background-color: white;
+     z-index: 100;
  }

@@ -33,17 +33,17 @@ function register(){
     .then((res) => {
         console.log(res);
         if (res['message'] == 'Invalid Email Address') {
-            alert('Email Adress Not Valid');
+            alert('Email Adress Not Valid "' + document.querySelector('#email').value+'"');
         }
 
         else if (res['message'] == 'ID Number Invalid') {
             alert('ID Number Not Valid')
         }
         else if (res['message'] == 'This username has been taken') {
-            alert('Sorry, Username Has Been Taken')
+            alert('Sorry, Username "'+document.querySelector('#username').value+'" Has Been Taken')
         }
         else {
-            alert('You Are Registered')
+            alert('You Are Registered \n An Email Has Been Sent With Your Username and Password Information')
             window.location = './login.html'
         }
     })

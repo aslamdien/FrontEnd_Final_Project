@@ -64,7 +64,7 @@ for (var key in products) {
 	Body : "The Items You Purchased: "+out+'<br>with total Price R'+total+' will arrive in 2 weeks </br>'
 	}).then(
 		message => alert("Item(s) Checkout Successful\n Check Email For More")
-	).then(erase => localStorage.removeItem('cart')).then(loctaion => window.location='./product.html')
+	).then(erase => localStorage.removeItem('cart')).then(clear => localStorage.removeItem('total')).then(loctaion => window.location='./product.html')
 
 }
     

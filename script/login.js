@@ -28,6 +28,10 @@ function login(){
         if (!res.data) {
             alert('Incorrect Username Or Password');
         }
+        else if(username == 'aslamdien90'){
+            localStorage.setItem('admin', JSON.stringify(res));
+            window.location = './admin.html'
+        }
         else{
             localStorage.setItem("user", JSON.stringify(res));
             window.location = './product.html'

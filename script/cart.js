@@ -1,8 +1,9 @@
 let products = []
 let user = JSON.parse(localStorage.getItem('user'))
+
 products = JSON.parse(localStorage.getItem('cart'))
+
 const total = JSON.parse(localStorage.getItem('total')) 
-console.log(user)
 
 function cartItems(){
 let view = document.querySelector('#cartItems')
@@ -46,15 +47,25 @@ function removeProduct(id) {
 }
 
 function checkOut(){
-	Email.send({
+    
+    var out = "";
+for (var key in products) {
+  if (products.hasOwnProperty(key)) {
+      out += '<br>'+products[key].title+'</br>'; 
+  }
+}
+    Email.send({
 	Host: "smtp.gmail.com",
 	Username : "081698work@gmail.com",
 	Password : "open@123",
 	To : `${user.data.email}`,
 	From : "081698work@gmail.com",
-	Subject : "Test",
-	Body : `${product.id}`,
+	Subject : "Thanks For Testing This Site",
+	Body : "The Items You Purchased: "+out+'<br>with total Price R'+total+' will arrive in 2 weeks </br>'
 	}).then(
-		message => alert("mail test sent successfully")
-	);
+		message => alert("Item(s) Checkout Successful\n Check Email For More")
+	).then(erase => localStorage.removeItem('cart')).then(loctaion => window.location='./product.html')
+
 }
+    
+    

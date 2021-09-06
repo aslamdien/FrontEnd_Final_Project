@@ -4,30 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/product.css">
+    <link rel="stylesheet" href="./styles/view.css">
     <script src="https://kit.fontawesome.com/4d777e0ebe.js" crossorigin="anonymous"></script>
     <title>Tech Town</title>
 </head>
 <body>
-    <div class="opening">
-        <h2 id="greeting"></h2>
-    <button onclick="logOut()">Log Out</button>
-    <button onclick="window.location=('./cart.html')">Cart</button>
-    </div>
+    <nav class="heading">
+        <h3 id=name><i class="fas fa-cog"></i> Tech Town</h3>
+        <div class="opening">
+            <h2 id="greeting"></h2>
+        </div>
+        <div class="btns">
+        <a href="#" class="log" onclick="logOut()"><h3>LogOut</h3></a>
+        <a href="#" class="log" onclick="window.location=('./cart.html')"><h3>Cart</h3></a >
+    </div>    
+    </nav>
     <div id="filters">
         <button onclick="productFilter('All')" class="items">All</button>
         <button onclick="productFilter('HardDrive')" class="items">HardDrive</button>
         <button onclick="productFilter('MotherBoard')" class="items">MotherBoard</button>
         <button onclick="productFilter('KeyBoard')" class="items">KeyBoard</button>
     </div>
-    <div id="cart">
-              <div class="total"></div>
-          </div>
-        </div>
-      </div>
     <div class="show-items"></div>
-    <footer>
-        <h4>Created </h4>
+    <footer class="foot">
+        <h4>Created By Ayyoob</h4>
     </footer>
     <script src="./script/product.js"></script>
 </body>

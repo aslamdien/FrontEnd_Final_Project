@@ -9,7 +9,11 @@ function cartItems(){
 let view = document.querySelector('#cartItems')
 let payment = document.querySelector('#total')    
 console.log(products,total);
-if (products == null, total ==null) {
+if(user == null){
+    window.location="./login.html"
+}
+
+else if (products == null, total ==null) {
     view.innerHTML = 'You Have No Items In Cart'
     payment.innerHTML = ''
     document.getElementById('checkout').style.display = 'none'
@@ -27,7 +31,7 @@ else{
     <h4 class="title">${item.title}</h4>
     <p class="type">${item.type}</p>
     <p class="price"><strong>R${item.price}</strong></p>
-    <button class ="rmbtn" onclick="removeProduct(${item.id})">Remove</button>
+    <button class ="rmbtn" onclick="removeProduct(${item.id})"><i class="fas fa-trash"></i></button>
     </div>` 
    })
    payment.innerHTML =`Your Total Comes To R${total}`

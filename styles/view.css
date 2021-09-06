@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -10,7 +11,7 @@ body{
     flex-direction: column;   
     justify-content: center;
     padding-top: 5%;
-    background: url(../images/rDnqjL.png) fixed;
+    background: url(../images/giphy.gif) fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -37,14 +38,13 @@ body{
     max-width: 38vh;
     max-height: 60vh;
     min-height: 30vh;
-    background: url(../images/image.jpg);
+    background: url(../images/2454622.jpg);
     flex-direction: column;
     display: flex;
     overflow: hidden;
     border: 1px solid;
     padding: 5px;
     gap:4px;
-    transition: all 0.2s linear;
 }
 
 .container:hover{
@@ -94,19 +94,69 @@ body{
      color: white;
  }
 
- .link:hover{
-    background: linear-gradient(145deg, #778cab, #8da7cb);           
- }
 
  .foot{
-     position: fixed;
-     top: 10;
-     right: 0;
-     left: 0;
-     bottom: 0;
      display: flex;
+     flex-wrap: wrap;
      justify-content: center;
      align-items: center;
      background-color: white;
-     z-index: 100;
+     height: 10vh;
  }
+
+ .items{
+     height: 4vh;
+     width: 15vh;
+     border: 1px solid black;
+     border-radius: 50px;
+background: linear-gradient(145deg, #4fcca9, #43ac8e);
+box-shadow:  32px 32px 35px #3fa286,
+             -32px -32px 35px #55dcb6;
+ }
+
+.items:active{
+background: linear-gradient(145deg, #43ac8e, #4fcca9);
+box-shadow:  32px 32px 35px #3fa286,
+             -32px -32px 35px #55dcb6;
+}
+
+.opening{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#greeting{
+color: white;
+}
+
+.log{
+    background: none;
+    border: 1px #000000 solid;
+    color: white;
+    padding: 5px;
+}
+
+.btn{
+    border: 1px solid white;
+background: linear-gradient(145deg, #ff0000, #e60000);
+}
+
+.btn:active{
+background: #ff0000;
+box-shadow: inset 20px 20px 60px #d90000,
+            inset -20px -20px 60px #ff0000;
+}
+
+.btns{
+display: flex;
+gap: 10px;
+}
+
+.back{
+    position: fixed;
+    top: 10;
+    left: 1;
+    right: 10px;
+    bottom: 10px;
+}

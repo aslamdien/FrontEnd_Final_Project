@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;   
+    justify-content: center;
+    padding-top: 5%;
+    background: url(../images/home-HF_GA-1920x1080-CYBERSECU.gif) fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.heading{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    background: rgba(132, 156, 190, 0.589);
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    max-height: 7vh;
+    min-height: 3vh;
+    padding: 2%;
+    align-items: center;
+}
+
+#filters{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.show-items{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 5% 10%;
+    gap: 10px;
+}
+
+#greeting{
+    color: white;
+}
+
+.container{
+    min-width: 20vh;
+    max-width: 38vh;
+    max-height: 60vh;
+    min-height: 30vh;
+    background: url(../images/depositphotos_116451478-stock-illustration-vector-futuristic-technology-background-3d.jpg);
+    flex-direction: column;
+    background-size: cover;
+    display: flex;
+    overflow: hidden;
+    border: 1px solid;
+    padding: 5px;
+    gap:4px;
+}
+#name{
+    font-family: 'Audiowide', cursive;
+    color: white;
+    font-size: 7vh;
+}
+
+.image{
+    min-height: 20vh;
+    max-height: 35vh;
+    max-width: 40vh;
+    min-width: 20vh;
+}
+
+#added {
+    flex-wrap: wrap;
+    position: fixed;
+    top:20%;
+    left: 38%;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 20px;
+background: #ff0000;
+box-shadow: inset 20px 20px 60px #d90000,
+            inset -20px -20px 60px #ff0000;
+    width: 0;
+    height: 0;
+    z-index: 10;
+    transition: all 0.3s linear;
+}
+  
+#added.active {
+    width: 44vh;
+    height: 70vh;
+    padding: 10px;
+
+}
+
+#update {
+    flex-wrap: wrap;
+    position: fixed;
+    top:20%;
+    left: 38%;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 20px;
+    background: #0062ff;
+    box-shadow: inset 20px 20px 60px #0053d9,
+            inset -20px -20px 60px #0071ff;
+    width: 0;
+    height: 0;
+    z-index: 10;
+    transition: all 0.3s linear;
+}
+  
+#update.active {
+    width: 44vh;
+    height: 40vh;
+    padding: 10px;
+}
+
+.product-info{
+    height: 5vh;
+}
+
+.imageup{
+    height: 40vh;
+    width: 40vh;
+}
+
+#cart{
+    position: fixed;
+    top: 5%;
+    left: 100%;
+    bottom: 0;
+    background-color: yellow;
+    transition: all 0.2 linear;
+}
+
+#cart.active{
+    left: 0;
+}
+
+.cartbtn{
+    position: fixed;
+    z-index: 100;
+}
+.foot{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 10vh;
+}
+
+.items{
+    height: 4vh;
+    width: 15vh;
+    border: 1px solid black;
+    border-radius: 50px;
+background: linear-gradient(145deg, #4fcca9, #43ac8e);
+
+}
+
+.items:active{
+background: linear-gradient(145deg, #45b762, #52d975);
+}
+
+.add{
+border: 1px solid black;
+border-radius: 3px;
+background-color: #ff0000;
+padding: 1px;
+}
+
+.edit{
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color: #0062ff;
+    padding: 1px;
+}

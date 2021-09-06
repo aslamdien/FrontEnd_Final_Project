@@ -18,7 +18,7 @@ function showProductList(products) {
           <h3 class="info">${item.title}</h3>
           <p class="info">${item.type}</p>
           <p class="info"><strong>R${item.price}</strong></p>
-          <button onclick="loginUser(${item.id})">Add to Cart</button>
+          <button onclick="loginUser(${item.id})"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
           </div>`;
         });
 };

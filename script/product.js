@@ -32,11 +32,11 @@ function showProductList(item) {
           <h3 class="info">${item.title}</h3>
           <p class="info">${item.type}</p>
           <p class="info"><strong>R${item.price}</strong></p>
-          <button onclick="event.preventDefault(); addTocart(${item.id})">Add to Cart</button>
+          <button class="btn" onclick="event.preventDefault(); addTocart(${item.id})">Add to Cart</button>
           </div>`;
         });
 };
-
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 function productFilter(type){
     // Display All Types

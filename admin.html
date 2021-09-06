@@ -4,17 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/product.css">
+    <link rel="stylesheet" href="./styles/admin.css">
     <script src="https://kit.fontawesome.com/4d777e0ebe.js" crossorigin="anonymous"></script>
     <title>Admin</title>
 </head>
 <body>
+  <nav class="heading">
+    <h3 id=name><i class="fas fa-cog"></i> Tech Town</h3>
     <div class="opening">
         <h2 id="greeting"></h2>
     </div>
+</div>    
+</nav>
     <div id="add">
-      <button onclick="button('added')">Add Product</button>
-      <button onclick="button('update')">Edit Product</button>
+      <button class="crud add" onclick="button('added')">Add Product</button>
+      <button class="crud edit" onclick="button('update')">Edit Product</button>
     </div>
     <div id="filters">
         <button onclick="productFilter('All')" class="items">All</button>
@@ -23,7 +27,6 @@
         <button onclick="productFilter('KeyBoard')" class="items">KeyBoard</button>
     </div>
     <div id="added">
-        <div>
           <i class="fas fa-reply" onclick="button('added')"></i>
           <div class="adding table">
             <form class="addproduct">
@@ -39,8 +42,7 @@
               <button class="product-btn" onclick="event.preventDefault(), addproduct()">Add</button>
             </form>
           </div>
-          <img src="" class="imageup"/>
-        </div>
+          <img src="" class="imageup" alt="image"/>
       </div>
       <br>
       <div id="update">
@@ -61,8 +63,8 @@
       <br>
     <div class="show-items"></div>
     <footer>
-      <div>
-        <h3>Made by Me</h3>
+      <div class="foot">
+        <h3>Created By Ayyoob</h3>
       </div>
     </footer>
     <script src="./script/admin.js"></script>

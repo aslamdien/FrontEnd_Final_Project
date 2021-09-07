@@ -36,6 +36,7 @@ function resetPass(){
     else {
         alert('Passowrod Reset Has been Sucessful')
         console.log(username, password, confirm);
+        window.location = './login.html'
     }
   });
 }

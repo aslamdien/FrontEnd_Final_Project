@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.heading{
+    display: flex;
+    justify-content: space-between;
+    background: rgba(190, 132, 132, 0.589);
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    max-height: 7vh;
+    min-height: 3vh;
+    padding: 2%;
+    align-items: center;
+}
+
+#title{
+    font-family: 'Audiowide', cursive;
+    color: white;
+    font-size: 7vh;
+}

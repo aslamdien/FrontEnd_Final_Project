@@ -11,16 +11,21 @@
 <body>
     <nav class="heading">
         <h3 id=name><i class="fas fa-cog"></i> Tech Town</h3>
-        <div class="log">
-            <a class="link" href="./login.html">Log In</a>
-            <a class="link" href="./register.html">Register</a>
+        <div class="btns">
+            <a class="link log" href="./login.html">Log In</a>
+            <a class="link log" href="./register.html">Register</a>
         </div>
     </nav>
+    <div>
+        <button onclick="button('filters')">Filter</button>
+    </div>
     <div id="filters">
         <button onclick="productFilter('All')" class="items">All</button>
         <button onclick="productFilter('HardDrive')" class="items">HardDrive</button>
         <button onclick="productFilter('MotherBoard')" class="items">MotherBoard</button>
         <button onclick="productFilter('KeyBoard')" class="items">KeyBoard</button>
+        <button onclick="productFilter('USB')" class="items">USB</button>
+        <button onclick="productFilter('Computer')" class="items">Computer Box</button>
     </div>
     </div>
     <div class="show-items"></div>

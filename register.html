@@ -9,7 +9,16 @@
     <title>Register</title>
 </head>
 <body>
-    <form onsubmit="event.preventDefault(); register()">
+    <nav class="heading">
+        <div>
+            <h3 id='title'><i class="fas fa-cog"></i> Tech Town</h3>
+        </div> 
+        <div>
+            <h5 id='title'>Register Page</h5>
+        </div>
+        </nav>
+    <div>
+       <form onsubmit="event.preventDefault(); register()">
         <input type="text" id='name' placeholder="First Name" required>
         <input type="text" id="surname" placeholder="surname" required>
         <input type="text" id="id_number" placeholder="ID Number" required>
@@ -21,7 +30,9 @@
             <input class="tick" type="checkbox" onclick="show_password()"/>
           </div>
         <button type="submit">Submit</button>
-    </form>
+    </form> 
+    </div>
+    
     <div>
         <p>Already Registered? Go to <span><a href="./login.html">Login</a></span></p>
     </div>

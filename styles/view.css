@@ -21,8 +21,17 @@ body{
 #filters{
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     gap: 5px;
+    height: 0;
+    overflow: hidden;
+    border: none;
+    transition: all 0.2s linear;
+}
+
+#filters.active{
+    height: 4.5vh;
 }
 
 .show-items{
@@ -87,7 +96,7 @@ body{
 .log{
      display: flex;
      gap: 10px;
- }
+}
 
  .link{
      text-decoration-line:none ;
@@ -110,14 +119,18 @@ body{
      border: 1px solid black;
      border-radius: 50px;
 background: linear-gradient(145deg, #4fcca9, #43ac8e);
-box-shadow:  32px 32px 35px #3fa286,
-             -32px -32px 35px #55dcb6;
+transition: all 0.1s linear;
  }
 
 .items:active{
 background: linear-gradient(145deg, #43ac8e, #4fcca9);
-box-shadow:  32px 32px 35px #3fa286,
-             -32px -32px 35px #55dcb6;
+box-shadow:  inset 32px 32px 35px #3fa286,
+             inset -32px -32px 35px #55dcb6;
+}
+
+.items:hover{
+    height: 4.5vh;
+    width: 15.5vh;
 }
 
 .opening{

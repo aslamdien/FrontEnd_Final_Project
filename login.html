@@ -4,26 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/login.css">
     <script src="https://kit.fontawesome.com/4d777e0ebe.js" crossorigin="anonymous"></script>
     <title>Log In</title>
 </head>
 <body>
+    <nav class="heading">
+    <div>
+        <h3 id='name'><i class="fas fa-cog"></i> Tech Town</h3>
+    </div> 
+    <div>
+        <h5 id='name'>Login Page</h5>
+    </div>
+    </nav>
     <div class="login">
-        <form onsubmit="event.preventDefault(); login()">
-            <h3>Log In</h3>
-            <input type="text" name="username" id="username" placeholder="username" required>
-            <input type="password" name="password" id="password" placeholder="password" required>
+        <form class="form" onsubmit="event.preventDefault(); login()">
+            <h3 id="sub">Log In</h3>
+            <input class="info" type="text" name="username" id="username" placeholder="username" required>
+            <input class="info" type="password" name="password" id="password" placeholder="password" required>
             <div class="showpass">
                 <p>Show Password!</p>
                 <input class="tick" type="checkbox" onclick="show_password()"/>
               </div>
-            <button type="submit">Log In</button>
+            <button class="btn" type="submit">Log In</button>
             <span id="error"></span>
-        </form>
-    </div>
-    <div>
         <p>Not Registered? <span><a href="./register.html">Sign Up!</a></span></p>
     </div>
+        </form>
+    </div>
+    <br>
+    <footer class="foot">
+        <div class="contact">
+            <div class="address">   
+            <address>
+                <h4>Main Office Address:</h4>
+                31 Random Road,<br>
+                Belhar<br>
+                City Of Cape Town,<br>
+                7342<br>
+            </address>
+        </div>
+        <br>
+        <div class="number">
+            <div class="contact-info">
+                <dl>
+                    <dt>Office Number:</dt>
+                    <dd>021 929 6485</dd><br>
+                    <dt>Email:</dt>
+                    <dd>081698work@gmail.com</dd><br>
+                </dl>
+            </div>
+        </div>
+        </div>
+        <div>
+            <h4>Created By Ayyoob</h4>
+        </div>
+    </footer>
     <script src="./script/login.js"></script>
 </body>
 </html>

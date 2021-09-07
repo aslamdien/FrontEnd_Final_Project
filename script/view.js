@@ -50,3 +50,9 @@ function loginUser(){
  alert('You Have To Log In To Purchase');
  window.location = './login.html'
 }
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Toggle Button<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+function button(id) {
+  document.getElementById(id).classList.toggle("active");
+}

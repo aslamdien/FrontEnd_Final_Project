@@ -16,14 +16,21 @@
         </div>
         <div class="btns">
         <a href="#" class="log" onclick="logOut()"><h3>LogOut</h3></a>
-        <a href="#" class="log" onclick="window.location=('./cart.html')"><h3>Cart</h3></a >
-    </div>    
+        <a href="#" class="log" onclick="window.location=('./cart.html')"><h3>Cart</h3></a>
+    </div> 
     </nav>
+    <div>
+        <button onclick="button('filters')">Filter</button>
+    </div>
     <div id="filters">
-        <button onclick="productFilter('All')" class="items">All</button>
-        <button onclick="productFilter('HardDrive')" class="items">HardDrive</button>
-        <button onclick="productFilter('MotherBoard')" class="items">MotherBoard</button>
-        <button onclick="productFilter('KeyBoard')" class="items">KeyBoard</button>
+        <div class=""> 
+          <button onclick="productFilter('All')" class="items">All</button>
+          <button onclick="productFilter('HardDrive')" class="items">HardDrive</button>
+          <button onclick="productFilter('MotherBoard')" class="items">MotherBoard</button>
+          <button onclick="productFilter('KeyBoard')" class="items">KeyBoard</button>
+          <button onclick="productFilter('USB')" class="items">USB</button>
+          <button onclick="productFilter('Computer')" class="items">Computer Box</button>
+        </div> 
     </div>
     <div class="show-items"></div>
     <footer class="foot">

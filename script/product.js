@@ -135,3 +135,8 @@ function logOut(){
     console.log('Log Out Cancelled')
   }
 }
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Toggle Button<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+function button(id) {
+  document.getElementById(id).classList.toggle("active");
+}

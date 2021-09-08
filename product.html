@@ -15,6 +15,7 @@
             <h2 id="greeting"></h2>
         </div>
         <div class="btns">
+        <button onclick="button('profile'), button('profile1')" class="profile-btn"><i class="far fa-user"></i></button>
         <a href="#" class="log" onclick="logOut()"><h3>LogOut</h3></a>
         <a href="#" class="log" onclick="window.location=('./cart.html')"><h3>Cart</h3></a>
     </div> 
@@ -32,9 +33,34 @@
           <button onclick="productFilter('Computer')" class="items">Computer Box</button>
         </div> 
     </div>
+    <div id="profile"></div>
     <div class="show-items"></div>
     <footer class="foot">
-        <h4>Created By Ayyoob</h4>
+        <div class="contact">
+            <div class="address">
+                <address>
+                    <h4 class="foot-info"><i class="fas fa-map-marker-alt"></i> Main Office Address:</h4><br>
+                    31 Random Road,<br>
+                    Belhar<br>
+                    City Of Cape Town,<br>
+                    7342<br>
+                    South Africa
+                </address>
+            </div>
+            <div class="number">
+                <div class="contact-info">
+                    <dl>
+                        <dt><h4 class="foot-info"><i class="fas fa-phone-alt"></i> Main Office Number:</h4></dt><br>
+                        <dd>+27 21 929 6485</dd><br>
+                        <dt><h4 class="foot-info"><i class="fas fa-paper-plane"></i> Email:</h4></dt><br>
+                        <dd>081698work@gmail.com</dd><br>
+                    </dl>
+                </div>
+            </div>  
+            </div>
+            <div class="created">
+            <h4>Created By Ayyoob Slamdien</h4>
+            </div>
     </footer>
     <script src="./script/product.js"></script>
 </body>

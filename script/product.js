@@ -1,63 +1,79 @@
-let products = []
-const user = JSON.parse(localStorage.getItem("user"))
+let products = [];
+const user = JSON.parse(localStorage.getItem("user"));
 
-function getUser(){
-    console.log(user)
-    if (user == null){
-     window.location = './login.html' 
-    }
-    else{
-      document.querySelector('#greeting').innerHTML = `Welcome Back ${user.data.name}`
-    }
+function getUser() {
+  console.log(user);
+  if (user == null) {
+    window.location = "./login.html";
+  } else {
+    document.querySelector(
+      "#greeting"
+    ).innerHTML = `Welcome Back ${user.data.name}`;
+  }
 }
 getUser();
 
+function showProfile() {
+  let pro = document.querySelector("#profile");
+  pro.innerHTML = `<div id="profile1">
+  <h3 class="pro">My Info</h3>
+  <p class="pro">Name: <span class="data">${user.data.name}</span></p>
+  <br>
+  <p class="pro">Surname: <span class="data">${user.data.surname}</span></p>
+  <br>
+  <p class="pro">ID No: <span class="data">${user.data.id_number}</span></p>
+  <br>
+  <p class="pro">Email : <span class="data">${user.data.email}</span></p>
+  </div>`;
+}
+showProfile();
+
 fetch("https://evening-fjord-01909.herokuapp.com/show-products/")
-      // Convert data from JSON
-      .then((res) => res.json())
-      //Stuff to do with data
-      .then((data) => {
-      // Console log to make sure I am getting the data
-      console.log(data);
-      products = data.data;
-      showProductList(products);
-      })
+  // Convert data from JSON
+  .then((res) => res.json())
+  //Stuff to do with data
+  .then((data) => {
+    // Console log to make sure I am getting the data
+    console.log(data);
+    products = data.data;
+    showProductList(products);
+  });
 
 function showProductList(item) {
-    let view = document.querySelector(".show-items");
-    view.innerHTML = ''
-      products.forEach((item) => {
-        view.innerHTML += `<div class="container" type=${item.type}>
+  let view = document.querySelector(".show-items");
+  view.innerHTML = "";
+  products.forEach((item) => {
+    view.innerHTML += `<div class="container" type=${item.type}>
           <img class="info image" src="${item.image}" alt="image"/>
           <h3 class="info">${item.title}</h3>
           <p class="info">${item.type}</p>
           <p class="info"><strong>R${item.price}</strong></p>
           <button class="btn" onclick="event.preventDefault(); addTocart(${item.id})">Add to Cart</button>
           </div>`;
-        });
-};
+  });
+}
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-function productFilter(type){
-    // Display All Types
-    let productCards = document.querySelectorAll(".container");
-    if (type == 'All') {
-      for(let i = 0; i < productCards.length; i++){
-        productCards[i].style.display = "flex"
-    } 
+function productFilter(type) {
+  // Display All Types
+  let productCards = document.querySelectorAll(".container");
+  if (type == "All") {
+    for (let i = 0; i < productCards.length; i++) {
+      productCards[i].style.display = "flex";
+    }
     return;
-    }
+  }
 
-    // Get all cards and hide
-    for(let i = 0; i < productCards.length; i++){
-        productCards[i].style.display = "none"
-    }
+  // Get all cards and hide
+  for (let i = 0; i < productCards.length; i++) {
+    productCards[i].style.display = "none";
+  }
 
-    // Get selected types to display
-    let selectedProducts = document.querySelectorAll(`[type=${type}]`)
-    for(let i = 0; i < selectedProducts.length; i++){
-        selectedProducts[i].style.display = "flex"
-    }
+  // Get selected types to display
+  let selectedProducts = document.querySelectorAll(`[type=${type}]`);
+  for (let i = 0; i < selectedProducts.length; i++) {
+    selectedProducts[i].style.display = "flex";
+  }
 }
 
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Add to Cart<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
@@ -84,7 +100,7 @@ function productFilter(type){
 //   let platediv = document.createElement("div");
 //   platediv.classList.add("viewcart_items");
 //   let plateItems = document.getElementsByClassName("carts")[0];
-  
+
 //   let PlateContent = `<div class="container">
 //   <img class="info image" src="${pic}" alt="image"/>
 //   <h2 class="info">${title}</h2>
@@ -96,23 +112,24 @@ function productFilter(type){
 // }
 
 // Better function and less Code
-let cart = []
-function addTocart(id){
-  let product = products.find((item) =>{
-    return item.id == id
+let cart = [];
+function addTocart(id) {
+  let product = products.find((item) => {
+    return item.id == id;
   });
   if (user == null) {
-    alert('You Are Not Log In')
-    window.location = './login.html'
-  }
-  
-  else {
-  cart.push(product);
-  console.log(cart);
-  localStorage.setItem('cart', JSON.stringify(cart))
-  let totalPrice = cart.reduce((total, item) => total + parseInt(item.price), .0);
-  localStorage.setItem('total', JSON.stringify(totalPrice))
-  console.log(totalPrice);
+    alert("You Are Not Log In");
+    window.location = "./login.html";
+  } else {
+    cart.push(product);
+    console.log(cart);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    let totalPrice = cart.reduce(
+      (total, item) => total + parseInt(item.price),
+      0.0
+    );
+    localStorage.setItem("total", JSON.stringify(totalPrice));
+    console.log(totalPrice);
   }
 }
 
@@ -122,17 +139,16 @@ function button(id) {
   document.querySelector(id).classList.toggle("active");
 }
 
-function toggleCart(){
-  document.querySelector('#cart').classList.toggle('active')
+function toggleCart() {
+  document.querySelector("#cart").classList.toggle("active");
 }
 
-function logOut(){
-  if (confirm('You want to Log Out?')){
-    localStorage.removeItem('user')
-    window.location = './index.html'
-  }
-  else {
-    console.log('Log Out Cancelled')
+function logOut() {
+  if (confirm("You want to Log Out?")) {
+    localStorage.removeItem("user");
+    window.location = "./index.html";
+  } else {
+    console.log("Log Out Cancelled");
   }
 }
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Toggle Button<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<

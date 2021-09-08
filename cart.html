@@ -10,9 +10,16 @@
     <title>Cart</title>
 </head>
 <body>
-    <div>
-        <a href="/product.html" ><i class="fas fa-arrow-left"></i></a>
-    </div>
+    <nav class="heading">
+        <div class="back">
+            <a id="name" href="/product.html" ><i class="fas fa-arrow-left"></i></a>
+            <h3 id='name'><i class="fas fa-cog"></i> Tech Town</h3>
+        </div> 
+        <div>
+            <h5 id='name'><i class="fas fa-shopping-cart"></i> Cart</h5>
+        </div>
+        </nav>
+    
     <div id="checkout">
         <form method="post">
             <input type="button" onclick="event.preventDefault(), checkOut()" value="Check Out"/>   

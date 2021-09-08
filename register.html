@@ -17,25 +17,54 @@
             <h5 id='title'>Register Page</h5>
         </div>
         </nav>
-    <div>
-       <form onsubmit="event.preventDefault(); register()">
-        <input type="text" id='name' placeholder="First Name" required>
-        <input type="text" id="surname" placeholder="surname" required>
-        <input type="text" id="id_number" placeholder="ID Number" required>
-        <input type="text" id="email" placeholder="email@gmail.com" required>
-        <input type="text" id="username" placeholder="Username" required>
-        <input type="password" id="password" placeholder="password" required>
+    <div class="register">
+       <form class="form" onsubmit="event.preventDefault(); register()">
+        <h3 id="sub">Register</h3>
+        <input class="info" type="text" id='name' placeholder="First Name" required>
+        <input class="info" type="text" id="surname" placeholder="surname" required>
+        <input class="info" type="text" id="id_number" placeholder="ID Number" required>
+        <input class="info" type="text" id="email" placeholder="email@gmail.com" required>
+        <input class="info" type="text" id="username" placeholder="Username" required>
+        <input class="info" type="password" id="password" placeholder="password" required>
         <div class="showpass">
             <p>Show Password!</p>
             <input class="tick" type="checkbox" onclick="show_password()"/>
           </div>
         <button type="submit">Submit</button>
+        <div>
+        <p>Already Registered? Go to <span><a href="./login.html">Login</a></span></p>
+    </div>
     </form> 
     </div>
     
-    <div>
-        <p>Already Registered? Go to <span><a href="./login.html">Login</a></span></p>
-    </div>
+    <footer class="foot">
+        <div class="contact">
+            <div class="address">
+                <address>
+                    <h4 class="foot-info"><i class="fas fa-map-marker-alt"></i> Main Office Address:</h4><br>
+                    31 Random Road,<br>
+                    Belhar<br>
+                    City Of Cape Town,<br>
+                    7342<br>
+                    South Africa
+                </address>
+            </div>
+            <div class="number">
+                <div class="contact-info">
+                    <dl>
+                        <dt><h4 class="foot-info"><i class="fas fa-phone-alt"></i> Main Office Number:</h4></dt><br>
+                        <dd>021 929 6485</dd><br>
+                        <dt><h4 class="foot-info"><i class="fas fa-paper-plane"></i> Email:</h4></dt><br>
+                        <dd>081698work@gmail.com</dd><br>
+                    </dl>
+                </div>
+            </div>  
+            </div>
+            <div class="created">
+            <h4>@Created By Ayyoob</h4>
+            </div>
+        </div>
+    </footer>
     <script src="./script/register.js"></script>
 </body>
 </html>

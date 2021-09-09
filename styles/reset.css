@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(../images/23Techfix-illo-superJumbo.gif);
+    background-size: cover;
+}
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    background: rgba(184, 99, 201, 0.589);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    max-height: 7vh;
+    min-height: 3vh;
+    padding: 2%;
+    align-items: center;
+}
+
+#title {
+    font-family: "Audiowide", cursive;
+    color: white;
+    font-size: 7vh;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    overflow: hidden;
+    background: rgba(226, 241, 18, 0.767);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+    border: white 1px solid;
+    max-height: 82vh;
+    max-width: 80vh;
+    min-height: 10vh;
+    min-width: 20vh;
+    padding: 50px;
+    border: 1px solid white;
+}
+
+.reset {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+
+  #sub {
+    font-family: "Audiowide", cursive;
+    color: white;
+    font-size: 5vh;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+  }
+
+  .info {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .created {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .foot {
+    background-color: white;
+    padding: 10px;
+  }
+  
+  .btn {
+    color: white;
+    font-size: 25px;
+    font-family: "Audiowide", cursive;
+    background: black;
+    cursor: pointer;
+    transition: all 0.1s linear;
+  }
+
+  .btn:active{
+      color: black;
+      background: white;
+  }
+  
+  .foot-info {
+    color: blue;
+    text-decoration-line: underline;
+    font-family: "Audiowide", cursive;
+  }
+  
+  .show {
+    font-family: "Audiowide", cursive;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    color: black;
+    font-size: 19px;
+    font-weight: bold;
+  }
+
+  #message{
+      color: red;
+  }
+
+  .showpass{
+    display: flex;
+    align-items: center;
+  }
+
+  @media screen and (max-width: 695px){
+    #title {
+      font-size: 6.5vh;
+    }
+  }
+
+  @media screen and (max-width: 640px){
+    #title {
+      font-size: 6vh;
+    }
+  }
+
+  @media screen and (max-width: 590px){
+    #title {
+      font-size: 5.5vh;
+    }
+  }
+
+  @media screen and (max-width: 560px){
+    #title {
+      font-size: 5vh;
+    }
+  }
+  
+  @media screen and (max-width: 490px) {
+  #title{
+    font-size: 4.5vh;
+  }
+  }
+  @media screen and (max-width: 440px){
+    #title{
+      font-size: 4vh;
+    }
+  }
+  @media screen and (max-width: 390px){
+    #title {
+      font-size: 3.5vh;
+    }
+  }
+
+  @media screen and (max-width: 560px){
+    #sub {
+      font-size: 4.5vh;
+    }
+  }
+
+  @media screen and (max-width: 360px){
+    #title{
+      font-size: 3.5vh;
+    }
+    .form{
+      padding: 40px;
+    }
+  }
+  
+  @media screen and (max-width: 350px){
+
+  #title{
+      font-size: 3vh;
+    }
+  .form{
+  padding: 30px;
+  }
+  
+  #message{
+    font-size: 3vh;
+  }
+  
+  .btn{
+    font-size: 18px;
+  }
+  
+  }
+  
+  @media screen and (max-width: 330px){
+    #title{
+      font-size: 3vh;
+    }
+  
+    #sub{
+      font-size: 4vh;
+    }
+    .show{
+      font-size: 15px;
+    }
+  
+    #message{
+      font-size: 2vh;
+    }
+  
+    .info{
+      font-size: 15px;
+    }
+  
+    .btn{
+      font-size: 15px;
+    }
+  }
+  
+  @media screen and (max-width: 285px){
+    #title{
+      font-size: 3vh;
+    }
+  
+    #sub{
+      font-size: 4vh;
+    }
+    .show{
+      font-size: 13px;
+    }
+  
+    .info{
+      font-size: 13px;
+    }
+  
+    .btn{
+      font-size: 13px;
+    }
+  }
+  
+  @media screen and (max-width: 245px){
+    #title{
+      font-size: 2.5vh;
+    }
+  
+    .form{
+      padding: 20px;
+    }
+    
+    #sub{
+      font-size: 3.5vh;
+    }
+    .show{
+      font-size: 10px;
+    }
+  
+    .info{
+      font-size: 10px;
+    } 
+    
+    .btn{
+      font-size: 10px;
+    }
+  }
+    

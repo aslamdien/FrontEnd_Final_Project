@@ -31,10 +31,10 @@ function resetPass(){
     .then((res) => {
         console.log(res);
     if (password != confirm){
-        alert('Passwords Do Not Match')
+        document.querySelector('#message').innerHTML='<strong><i class="fas fa-exclamation-circle"></i> Password Do Not Match!</strong>'
     }
     else {
-        alert('Passowrod Reset Has been Sucessful')
+        alert('Passoword Reset Has been Sucessful')
         console.log(username, password, confirm);
         window.location = './login.html'
     }

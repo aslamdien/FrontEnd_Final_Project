@@ -22,13 +22,16 @@
             <h3 id="sub">Log In</h3>
             <input class="info" type="text" id="username"placeholder="username" required>
             <input class="info" type="password" id="password" placeholder="password" required>
+            <p id="error"></p>
             <div class="showpass">
-                <p>Show Password!</p>
                 <input class="tick" type="checkbox" onclick="show_password()"/>
-              </div>
+                <p class="show">Show Password!</p>
+            </div>
             <button class="btn" type="submit">Log In</button>
-            <span id="error"></span>
-        <p>Not Registered? <span><a href="./register.html">Sign Up!</a></span></p>
+            <div class="forget">
+                <a href="./resetpass.html"><p class="show">Forget Password?</p></a>
+            </div>
+        <p class="show">Not Registered? <span><a href="./register.html">Sign Up!</a></span></p>
     </div>
         </form>
     </div>

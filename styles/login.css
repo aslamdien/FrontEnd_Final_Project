@@ -24,7 +24,7 @@ body {
   -webkit-text-stroke-color: black;
 }
 
-p {
+.show {
   font-family: "Audiowide", cursive;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
@@ -47,9 +47,10 @@ p {
   justify-content: center;
   gap: 10px;
   overflow: hidden;
-  border: black 1px solid;
-  background: url(../images/log.jpeg);
-  background-size: cover;
+  border: white 1px solid;
+  background: rgba(18, 33, 241, 0.582);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   max-height: 80vh;
   max-width: 60vh;
   min-height: 10vh;
@@ -83,6 +84,12 @@ p {
   font-size: 25px;
   font-family: "Audiowide", cursive;
   background: black;
+  cursor: pointer;
+}
+
+.btn:active{
+  color: black;
+  background: white;
 }
 
 a {
@@ -110,4 +117,124 @@ a {
   color: blue;
   text-decoration-line: underline;
   font-family: "Audiowide", cursive;
+}
+
+.showpass{
+  display: flex;
+  align-items: center;
+}
+
+#error{
+  color: red;
+}
+
+@media screen and (max-width: 560px){
+  #name {
+    font-size: 6vh;
+  }
+}
+
+@media screen and (max-width: 490px) {
+#name{
+  font-size: 5vh;
+}
+}
+@media screen and (max-width: 400px){
+  #name{
+    font-size: 4.5vh;
+  }
+}
+@media screen and (max-width: 360px){
+  #name{
+    font-size: 4vh;
+  }
+  .form{
+    padding: 40px;
+  }
+}
+
+@media screen and (max-width: 350px){
+.form{
+padding: 30px;
+}
+
+#error{
+  font-size: 3vh;
+}
+
+.btn{
+  font-size: 18px;
+}
+
+}
+
+@media screen and (max-width: 330px){
+  #name{
+    font-size: 3.5vh;
+  }
+
+  #sub{
+    font-size: 5vh;
+  }
+  .show{
+    font-size: 15px;
+  }
+
+  #error{
+    font-size: 2vh;
+  }
+
+  .info{
+    font-size: 15px;
+  }
+
+  .btn{
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 285px){
+  #name{
+    font-size: 3vh;
+  }
+
+  #sub{
+    font-size: 4vh;
+  }
+  .show{
+    font-size: 13px;
+  }
+
+  .info{
+    font-size: 13px;
+  }
+
+  .btn{
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 245px){
+  #name{
+    font-size: 2.5vh;
+  }
+
+  .form{
+    padding: 20px;
+  }
+  
+  #sub{
+    font-size: 3.5vh;
+  }
+  .show{
+    font-size: 10px;
+  }
+
+  .info{
+    font-size: 10px;
+  } 
+  
+  .btn{
+    font-size: 10px;
+  }
 }

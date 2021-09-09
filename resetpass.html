@@ -4,22 +4,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/reset.css">
     <script src="https://kit.fontawesome.com/4d777e0ebe.js" crossorigin="anonymous"></script>
     <title>Password Reset</title>
 </head>
 <body>
-    <form onsubmit="event.preventDefault(); resetPass()">
-        <label for="username">Username</label>
-        <input type="text" id='username' placeholder="Username">
-        <label for="password">New Password</label>
-        <input type="password" id="password" placeholder="Password">
-        <label for="confirm">Confirm New Password</label>
-        <input type="password" id="confirm" placeholder="Confirm Password">
-        <p>Show Password!</p>
-        <input class="tick" type="checkbox" onclick="show_password()"/>
-      </div>
-        <button type="submit">Reset</button>
-    </form>
+    <nav class="heading">
+        <div>
+            <h3 id='title'><i class="fas fa-cog"></i> Tech Town</h3>
+        </div> 
+        <div>
+            <h5 id='title'>Reset Password</h5>
+        </div>
+    </nav>
+        <div class="reset">
+            <form class="form" onsubmit="event.preventDefault(); resetPass()">
+                <h3 id="sub">Reset Password</h3>
+                <input class="info" type="text" id='username' placeholder="Username">
+                <input class="info" type="password" id="password" placeholder="Password">
+                <input class="info" type="password" id="confirm" placeholder="Confirm Password">
+                <p id='message'></p>
+                <div class="showpass">
+                    <input class="tick" type="checkbox" onclick="show_password()"/>
+                    <p class='show'>Show Password!</p>
+                </div>
+                <button class="btn" type="submit">Reset</button>
+            </form>
+        </div>
+        <footer class="foot">
+            <div class="contact">
+                <div class="address">
+                    <address>
+                        <h4 class="foot-info"><i class="fas fa-map-marker-alt"></i> Main Office Address:</h4><br>
+                        31 Random Road,<br>
+                        Belhar<br>
+                        City Of Cape Town,<br>
+                        7342<br>
+                        South Africa
+                    </address>
+                </div>
+                <div class="number">
+                    <div class="contact-info">
+                        <dl>
+                            <dt><h4 class="foot-info"><i class="fas fa-phone-alt"></i> Main Office Number:</h4></dt><br>
+                            <dd>021 929 6485</dd><br>
+                            <dt><h4 class="foot-info"><i class="fas fa-paper-plane"></i> Email:</h4></dt><br>
+                            <dd>081698work@gmail.com</dd><br>
+                        </dl>
+                    </div>
+                </div>  
+                </div>
+                <div class="created">
+                <h4>@Created By Ayyoob</h4>
+                </div>
+            </div>
+        </footer>
     <script src="./script/reset.js"></script>
 </body>
 </html>

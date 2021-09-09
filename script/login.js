@@ -26,7 +26,7 @@ function login(){
     .then((res) => {
         console.log(res);
         if (!res.data) {
-            alert('Incorrect Username Or Password');
+            document.querySelector('#error').innerHTML='<strong><i class="fas fa-exclamation-circle"></i> Incorrect Username Or Password</strong>';
         }
         // else if(username == 'aslamdien90'){
         //     localStorage.setItem('admin', JSON.stringify(res));

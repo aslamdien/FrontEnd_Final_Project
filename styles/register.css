@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   background: url(../images/register.gif);
   background-size: cover;
@@ -33,13 +34,14 @@ body {
   gap: 10px;
   overflow: hidden;
   border: white 1px solid;
-  max-height: 80vh;
-  max-width: 60vh;
+  max-height: fit-content;
+  max-width: 80vh;
   min-height: 10vh;
   min-width: 20vh;
-  background: url(../images/download.jpeg);
-  background-size: cover;
-  padding: 50px;
+  background: rgba(170, 166, 166, 0.842);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  padding: 35px;
 }
 
 .register {
@@ -83,13 +85,26 @@ body {
   align-items: center;
 }
 
+.btn {
+  color: white;
+  font-size: 25px;
+  font-family: "Audiowide", cursive;
+  background: black;
+  cursor: pointer;
+}
+
+.btn:active{
+  color: black;
+  background: white;
+}
+
 .foot-info {
   color: blue;
   text-decoration-line: underline;
   font-family: "Audiowide", cursive;
 }
 
-p {
+.show {
   font-family: "Audiowide", cursive;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: white;
@@ -102,5 +117,26 @@ a {
     color: white;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
-    text-decoration-line: underline,white;
+}
+
+.showpass{
+  display: flex;
+  align-items: center;
+}
+
+#email-er{
+  color: red;
+  text-decoration-line:underline ;
+font-weight: bolder;
+}
+
+.id-er{
+color: red;
+text-decoration-line:underline ;
+
+}
+
+.user-er{
+color: red;
+text-decoration-line:underline ;
 }

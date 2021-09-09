@@ -103,6 +103,7 @@ body {
   color: white;
   font-size: 25px;
   cursor: pointer;
+  font-family: 'Audiowide', cursive;
 }
 
 .link {
@@ -140,12 +141,6 @@ body {
   color: white;
 }
 
-.log {
-  background: none;
-  border: 1px #000000 solid;
-  color: white;
-  padding: 5px;
-}
 
 .btn {
   border: 1px solid white;

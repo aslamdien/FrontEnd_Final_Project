@@ -76,42 +76,8 @@ function productFilter(type) {
   }
 }
 
-//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Add to Cart<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-// function addTocart(id) {
-//   fetch(`https://evening-fjord-01909.herokuapp.com/view-product/${id}`, {
-//     method: "GET",
-//     body: JSON.stringify(),
-//     headers: {
-//       "content-type": "application/json",
-//     },
-//   })
-//     .then((res) => res.json())
-//     .then((data) => {
-//       console.log(data);
-//       let title = `${data.data[1]}`;
-//       let pic = `${data.data[2]}`;
-//       let type = `${data.data[4]}`;
-//       let price = `${data.data[3]}`;
-//       addToPlate(title, pic, type, price);
-//     });
-// }
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Add to Cart<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
-// function addToPlate(title, pic, type, price) {
-//   let platediv = document.createElement("div");
-//   platediv.classList.add("viewcart_items");
-//   let plateItems = document.getElementsByClassName("carts")[0];
-
-//   let PlateContent = `<div class="container">
-//   <img class="info image" src="${pic}" alt="image"/>
-//   <h2 class="info">${title}</h2>
-//   <p class="info">${type}</p>
-//   <p class="info"><strong>R${price}</strong></p>
-//   <button class ="rmbtn" onclick="removeFromCart()">Remove</button>`;
-//   platediv.innerHTML = PlateContent;
-//   plateItems.append(platediv);
-// }
-
-// Better function and less Code
 function addTocart(id) {
   let product = products.find((item) => {
     return item.id == id;
@@ -124,14 +90,29 @@ let loCart = JSON.parse(localStorage.getItem('cart')) ? JSON.parse(localStorage.
     loCart.push(product);
     console.log(loCart);
     localStorage.setItem("cart", JSON.stringify(loCart));
-    let totalPrice = loCart.reduce(
-      (total, item) => total + parseInt(item.price),
-      0.0
-    );
+    let totalPrice = loCart.reduce((total, item) => total + parseInt(item.price),0.0);
+    let cartSize = JSON.parse(localStorage.getItem('cart')).length
+    document.querySelector('.cartTotal').innerHTML = cartSize
     localStorage.setItem("total", JSON.stringify(totalPrice));
     console.log(totalPrice);
   }
 }
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Check<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+function checkCart() {
+  
+    let container = document.querySelector('.cartTotal')
+    let InCart = JSON.parse(localStorage.getItem('cart')).length
+    if (InCart == null) {
+      addTocart();
+    }
+    
+    else{
+      container.innerHTML = InCart
+    }
+}
+
+checkCart();
 
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
@@ -142,6 +123,8 @@ function button(id) {
 function toggleCart() {
   document.querySelector("#cart").classList.toggle("active");
 }
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>LogOut<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 function logOut() {
   if (confirm("You want to Log Out?")) {

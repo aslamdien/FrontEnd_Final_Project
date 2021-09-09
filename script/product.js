@@ -112,19 +112,19 @@ function productFilter(type) {
 // }
 
 // Better function and less Code
-let cart = [];
 function addTocart(id) {
   let product = products.find((item) => {
     return item.id == id;
   });
+let loCart = JSON.parse(localStorage.getItem('cart')) ? JSON.parse(localStorage.getItem('cart')) : []
   if (user == null) {
     alert("You Are Not Log In");
     window.location = "./login.html";
   } else {
-    cart.push(product);
-    console.log(cart);
-    localStorage.setItem("cart", JSON.stringify(cart));
-    let totalPrice = cart.reduce(
+    loCart.push(product);
+    console.log(loCart);
+    localStorage.setItem("cart", JSON.stringify(loCart));
+    let totalPrice = loCart.reduce(
       (total, item) => total + parseInt(item.price),
       0.0
     );

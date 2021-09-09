@@ -1,7 +1,7 @@
 let products = []
 let user = JSON.parse(localStorage.getItem('user'))
 
-products = JSON.parse(localStorage.getItem('cart'))
+products = JSON.parse(localStorage.getItem("cart"))
 
 const total = JSON.parse(localStorage.getItem('total')) 
 

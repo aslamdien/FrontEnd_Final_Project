@@ -17,6 +17,7 @@ else if (products == null, total ==null) {
     view.innerHTML = 'You Have No Items In Cart'
     payment.innerHTML = ''
     document.getElementById('checkout').style.display = 'none'
+    
 }
 else if (products.length == 0) {
     view.innerHTML = 'You Have No Items In Cart'
@@ -35,6 +36,8 @@ else{
     </div>` 
    })
    payment.innerHTML =`Your Total Comes To R${total}`
+
+
   }
 }
 cartItems();

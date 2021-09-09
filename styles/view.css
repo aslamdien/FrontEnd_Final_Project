@@ -70,6 +70,7 @@ body {
 .info {
   color: white;
 }
+
 .heading {
   position: fixed;
   top: 0;
@@ -91,10 +92,6 @@ body {
   font-family: "Audiowide", cursive;
   color: white;
   font-size: 7vh;
-}
-.log {
-  display: flex;
-  gap: 10px;
 }
 
 .profile-btn {
@@ -155,7 +152,7 @@ body {
 
 .btns {
   display: flex;
-  gap: 10px;
+  gap: 22px;
 }
 
 .back {
@@ -234,4 +231,138 @@ body {
 #profile1.active{
 visibility: visible;
 height: 35vh;
+}
+
+@media screen and (max-width: 1185px){
+#profile.active{
+  height: 45vh;
+  padding:25px ;
+}
+
+#profile1.active{
+  height: 37vh;
+}
+    
+}
+
+@media screen and (max-width: 1280px){
+.items{
+  font-size: 2vh;
+}
+  
+}
+
+@media screen and (max-width: 800px){
+#filters{
+  margin-top: 5px;
+}
+}
+
+@media screen and (max-width: 775px){
+#filters{
+  margin-top: 10px;
+}
+  
+  }
+
+@media screen and (max-width: 790px){
+#name{
+  font-size: 6.5vh;
+}
+.btns{
+  gap: 17px;
+}
+
+}
+
+@media screen and (max-width: 740px){
+  #name{
+    font-size: 6vh;
+  }
+  .btns{
+    gap: 15px;
+  }
+  
+  }
+@media screen and (max-width: 690px){
+  #greeting{
+    display: none;
+  }
+    
+}
+
+@media screen and (max-width: 740px){
+  #filters{
+margin-top: 17px;
+  }
+  }
+
+@media screen and (max-width: 537px){
+
+  #filters{
+    margin-top: 20px;
+  }
+  #filters.active{
+    height: 10vh;
+  }
+    
+}
+  
+@media screen and (max-width: 460px){
+  #name{
+    font-size: 5vh;
+  }
+  .btns{
+    gap: 13px;
+  }
+
+  .profile-btn{
+    font-size: 20px;
+  }
+    
+}
+  
+@media screen and (max-width: 400px){
+#filters{
+  margin-top: 25px;
+}
+    
+}
+
+@media screen and (max-width: 360px){
+  #name{
+    font-size: 4.5vh;
+  }
+  .btns{
+    gap: 10px;
+  }
+    
+}
+@media screen and (max-width: 345px){
+  #name{
+    font-size: 4.5vh;
+  }
+
+  .profile-btn{
+    font-size: 17px;
+  }
+    
+}
+
+@media screen and (max-width: 330px){
+.heading{
+  flex-direction: column;
+  max-height: 12vh;
+}
+
+#filters{
+  margin-top: 55px;
+}
+    
+}
+
+@media screen and (max-width: 268px){
+  #filters.active{
+    height: 15vh;
+  }
 }

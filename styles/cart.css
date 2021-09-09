@@ -86,12 +86,12 @@ body{
     font-family: "Audiowide", cursive;
   }
 
-  .foot {
+.foot {
     background-color: white;
     padding: 10px;
-  }
+}
 
-  .fa-arrow-left:hover{
+.fa-arrow-left:hover{
       transition: all 0.5s linear;
       color: black;
-  }
+}

@@ -57,6 +57,7 @@ body{
 
 #greeting{
     color: white;
+    font-size: 4vh;
 }
 
 .container{
@@ -209,3 +210,164 @@ box-shadow: inset 20px 20px 60px #d90000,
     background-color: #0062ff;
     padding: 1px;
 }
+
+
+.crud{
+    font-size: 5vh;
+    padding: 3px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1280px) {
+    .items{
+      font-size: 2vh;
+  
+    }
+
+    #added{
+        top: 11%;
+    left: 40%;
+    }
+
+    #update{
+        top: 11%;
+    left: 40%;
+    }
+  }
+
+@media screen and (max-width:890px){
+    #added{
+        top: 11%;
+    left: 34%;
+    }
+
+    #update{
+        top: 11%;
+    left: 34%;
+    }
+}
+@media screen and (max-width: 815px){
+#greeting{
+ font-size: 3.5vh;
+}
+
+#name{
+    font-size: 6.5vh;
+}
+
+.crud{
+    font-size: 4.5vh;
+    padding: 2.5px;
+}
+
+}
+@media screen and (max-width: 800px){
+    #filters{
+      margin-top: 5px;
+    }
+}
+
+@media screen and (max-width: 775px){
+    #filters{
+      margin-top: 10px;
+    }
+      
+    }
+    @media screen and (max-width: 740px){
+        #filters{
+      margin-top: 17px;
+        }
+      }
+
+@media screen and (max-width: 700px){
+    #greeting{
+     font-size: 3vh;
+    }
+    
+    #name{
+        font-size: 6vh;
+    }
+    
+    .crud{
+        font-size: 4vh;
+        padding: 2.5px;
+    }
+    
+    }
+
+    @media screen and (max-width: 640px){
+        #greeting{
+         display: none;
+        }
+        
+}
+
+@media screen and (max-width: 600px) {
+    #added{
+        top: 11%;
+    left: 30%;
+    }
+
+    #update{
+        top: 11%;
+    left: 30%;
+    }
+}
+@media screen and (max-width: 537px){
+
+    #filters{
+      margin-top: 20px;
+    }
+    #filters.active{
+      height: 10vh;
+    }
+
+    #added{
+        top: 11%;
+    left: 25%;
+    }
+
+    #update{
+        top: 11%;
+    left: 25%;
+    }
+      
+  }
+
+   
+@media screen and (max-width: 425px){
+    .heading{
+        flex-direction: column;
+        max-height: 18vh;
+    }
+      
+    #filters{
+      margin-top: 90px;
+    }
+    #added{
+    top: 20%;
+    left: 20%;
+    }
+
+    #update{
+    top: 20%;
+    left: 20%;
+    }
+
+}
+
+@media screen and (max-width: 400){
+    #added{
+    left: 15%;
+    }
+
+    #update{
+    left: 15%;
+    }
+}
+
+@media screen and (max-width: 268px){
+    #filters.active{
+      height: 15vh;
+    }
+  }

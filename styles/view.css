@@ -188,6 +188,8 @@ body {
   position: fixed;
   top: 52px;
   left: 73%;
+  right: 0;
+  bottom: 0;
   transition: all 0.2s linear;
   background: #004cff;
   box-shadow: inset 20px 20px 60px #0041d9, inset -20px -20px 60px #0057ff;
@@ -232,11 +234,22 @@ body {
 visibility: visible;
 height: 35vh;
 }
+@media screen and (max-width: 1280px) {
+  .items{
+    font-size: 2vh;
+
+  }
+}
 
 @media screen and (max-width: 1185px){
+#profile{
+left:71%;  
+}
+
 #profile.active{
   height: 45vh;
   padding:25px ;
+  
 }
 
 #profile1.active{
@@ -245,12 +258,61 @@ height: 35vh;
     
 }
 
-@media screen and (max-width: 1280px){
-.items{
-  font-size: 2vh;
+@media screen and (max-width: 1132px){
+#profile{
+  top: 44px;
+  left:70%
 }
   
 }
+
+@media screen and (max-width: 1100px){
+  #profile{
+    left:69%
+  }
+    
+  }
+
+  @media screen and (max-width: 1065px){
+    #profile{
+      left:68%;
+    }
+      
+  }
+
+  @media screen and (max-width: 1030px){
+    #profile{
+      top: 42px;
+      left:67%;
+    }
+      
+  }
+  @media screen and (max-width: 1000px){
+    #profile{
+      left:66%;
+    }
+      
+  }
+  @media screen and (max-width: 970px){
+    #profile{
+      left:63%;
+    }
+      
+  }
+
+  @media screen and (max-width: 890px){
+    #profile{
+      left:60%;
+    }
+      
+  }
+
+  @media screen and (max-width: 825px){
+    #profile{
+      left:58%;
+    }
+      
+  }
 
 @media screen and (max-width: 800px){
 #filters{
@@ -258,12 +320,12 @@ height: 35vh;
 }
 }
 
-@media screen and (max-width: 775px){
-#filters{
-  margin-top: 10px;
-}
-  
+@media screen and (max-width: 785px){
+  #profile{
+    left:55%;
   }
+    
+}
 
 @media screen and (max-width: 790px){
 #name{
@@ -275,6 +337,15 @@ height: 35vh;
 
 }
 
+@media screen and (max-width: 775px){
+#filters{
+  margin-top: 10px;
+}
+  
+}
+
+
+
 @media screen and (max-width: 740px){
   #name{
     font-size: 6vh;
@@ -284,17 +355,66 @@ height: 35vh;
   }
   
   }
-@media screen and (max-width: 690px){
-  #greeting{
-    display: none;
+
+@media screen and (max-width: 730px){
+  #profile{
+      left:50%;
   }
-    
+      
 }
 
 @media screen and (max-width: 740px){
   #filters{
 margin-top: 17px;
   }
+}
+
+@media screen and (max-width: 700px){
+  #greeting{
+    display: none;
+  }
+    
+}
+
+  @media screen and (max-width: 660px){
+    #profile{
+      left:47%;
+    }
+      
+  }
+@media screen and (max-width: 625px){
+    #profile{
+      top: 40px;
+      left:45%;
+    }
+      
+  }
+  @media screen and (max-width: 600px){
+    #profile{
+      left:43%;
+    }
+      
+  }
+
+  @media screen and (max-width: 580px){
+    #profile{
+      left: 41%;
+    }
+      
+  }
+
+  @media screen and (max-width: 560px){
+    #profile{
+      left:40%;
+    }
+      
+  }
+
+  @media screen and (max-width: 550px){
+    #profile{
+      left:38%;
+    }
+      
   }
 
 @media screen and (max-width: 537px){
@@ -307,6 +427,27 @@ margin-top: 17px;
   }
     
 }
+
+@media screen and (max-width: 530px){
+  #profile{
+    left:34%;
+  }
+    
+}
+
+@media screen and (max-width: 500px){
+  #profile{
+    left:31%;
+  }
+    
+}
+
+@media screen and (max-width: 480px){
+  #profile{
+    left:28%;
+  }
+    
+}
   
 @media screen and (max-width: 460px){
   #name{
@@ -316,8 +457,32 @@ margin-top: 17px;
     gap: 13px;
   }
 
+  #profile{
+    left:27%
+  }
+
   .profile-btn{
     font-size: 20px;
+  }
+    
+}
+
+@media screen and (max-width: 450px){
+  #profile{
+    left:25%;
+  }
+    
+}
+
+@media screen and (max-width: 440px){
+  #profile{
+    left:20%;
+  }
+    
+}
+@media screen and (max-width: 415px){
+  #profile{
+    left:17%;
   }
     
 }
@@ -326,10 +491,14 @@ margin-top: 17px;
 #filters{
   margin-top: 25px;
 }
+
+#profile{
+    left:12%;
+  }
     
 }
 
-@media screen and (max-width: 360px){
+@media screen and (max-width: 380px){
   #name{
     font-size: 4.5vh;
   }
@@ -338,6 +507,29 @@ margin-top: 17px;
   }
     
 }
+
+@media screen and (max-width: 375px){
+  #profile{
+    left:10%;
+  }
+    
+}
+
+@media screen and (max-width: 365px){
+  #profile.active{
+    left:8%;
+  }
+    
+}
+
+@media screen and (max-width: 357px){
+  #profile{
+    left:0%;
+    right: 2%;
+  }
+    
+}
+
 @media screen and (max-width: 345px){
   #name{
     font-size: 4.5vh;
@@ -345,6 +537,11 @@ margin-top: 17px;
 
   .profile-btn{
     font-size: 17px;
+  }
+
+  #profile{
+    left:0%;
+    right: 3%;
   }
     
 }
@@ -357,8 +554,8 @@ margin-top: 17px;
 
 #filters{
   margin-top: 55px;
-}
-    
+}   
+
 }
 
 @media screen and (max-width: 268px){

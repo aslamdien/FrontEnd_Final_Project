@@ -140,3 +140,139 @@ text-decoration-line:underline ;
 color: red;
 text-decoration-line:underline ;
 }
+
+
+@media screen and (max-width: 626px){
+  #title {
+    font-size: 6vh;
+  }
+}
+
+@media screen and (max-width: 545px) {
+#title{
+  font-size: 5vh;
+}
+}
+@media screen and (max-width: 455px){
+  #title{
+    font-size: 4.5vh;
+  }
+}
+
+@media screen and (max-width: 405px){
+  #title{
+    font-size: 4vh;
+  }
+  .form{
+    padding: 40px;
+  }
+}
+
+@media screen and (max-width: 365px){
+  #title{
+    font-size: 3.5vh;
+  }
+}
+
+@media screen and (max-width: 350px){
+.form{
+padding: 30px;
+}
+
+#email-er{
+  font-size: 3vh;
+}
+
+#id-er{
+  font-size: 3vh;
+}
+
+#user-er{
+  font-size: 3vh;
+}
+
+.btn{
+  font-size: 18px;
+}
+
+}
+
+@media screen and (max-width: 330px){
+  #title{
+    font-size: 3.5vh;
+  }
+
+  #sub{
+    font-size: 5vh;
+  }
+  .show{
+    font-size: 15px;
+  }
+
+  #email-er{
+    font-size: 2vh;
+  }
+
+  .id-er{
+    font-size: 2vh;
+  }
+
+  .user-er{
+    font-size: 2vh;
+  }
+
+  .info{
+    font-size: 15px;
+    padding: 5px;
+  }
+
+  .btn{
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 315px){
+  #title{
+    font-size: 3vh;
+  }
+
+  #sub{
+    font-size: 4vh;
+  }
+  .show{
+    font-size: 13px;
+  }
+
+  .info{
+    font-size: 13px;
+  }
+
+  .btn{
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 245px){
+  #title{
+    font-size: 2.5vh;
+  }
+
+  .form{
+    padding: 20px;
+  }
+  
+  #sub{
+    font-size: 3.5vh;
+  }
+  .show{
+    font-size: 10px;
+  }
+
+  .info{
+    font-size: 10px;
+  } 
+  
+  .btn{
+    font-size: 10px;
+  }
+}

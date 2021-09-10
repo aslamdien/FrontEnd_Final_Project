@@ -82,11 +82,15 @@ function addTocart(id) {
   let product = products.find((item) => {
     return item.id == id;
   });
+
 let loCart = JSON.parse(localStorage.getItem('cart')) ? JSON.parse(localStorage.getItem('cart')) : []
-  if (user == null) {
+  
+if (user == null) {
     alert("You Are Not Log In");
     window.location = "./login.html";
-  } else {
+  } 
+  
+  else {
     loCart.push(product);
     console.log(loCart);
     localStorage.setItem("cart", JSON.stringify(loCart));

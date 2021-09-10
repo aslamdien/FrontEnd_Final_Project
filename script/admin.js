@@ -1,8 +1,14 @@
 // Get admin data from localStorage
-function getUser(){
-    const admin = JSON.parse(localStorage.getItem("admin"))
-    console.log(admin)
-    document.querySelector('#greeting').innerHTML = `Welcome Back Admin ${admin.data.name}`   
+function getUser() {
+  const admin = JSON.parse(localStorage.getItem("admin"))
+  console.log(admin);
+  if (admin == null) {
+    window.location = "./login.html";
+  } else {
+    document.querySelector(
+      "#greeting"
+    ).innerHTML = `Welcome Back Admin ${admin.data.name}`;
+  }
 }
 getUser();
 
@@ -62,7 +68,7 @@ function showProductList() {
     }
 }
 
-//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Preview Image<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 function previewFile() {
   const image = document.querySelector(".imageup");
   const file = document.querySelector("#image").files[0];
@@ -81,6 +87,7 @@ function previewFile() {
     reader.readAsDataURL(file);
   }
 }
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Preview the Image<<<<<<<<<<<<<<<<<<<<<<<<<
 
 function previewFiles() {
   const image = document.querySelector(".imageups");
@@ -100,7 +107,7 @@ function previewFiles() {
     reader.readAsDataURL(file);
   }
 }
-
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Add New Product<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 function addproduct() {
   let title = document.getElementById("title").value;
   let price = document.getElementById("price").value;
@@ -196,3 +203,13 @@ function updateProduct(id) {
   })
 }
 
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Log Out<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+function logOut() {
+  if (confirm("You want to Log Out?")) {
+    localStorage.removeItem("admin");
+    window.location = "./login.html";
+  } else {
+    console.log("Log Out Cancelled");
+  }
+}

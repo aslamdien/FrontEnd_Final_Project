@@ -14,13 +14,15 @@
     <div class="opening">
         <h2 id="greeting"></h2>
     </div>
+</div>
+<div id="add">
+      <button class="crud add" onclick="button('added')"><i class="fas fa-plus-circle"></i></button>
+      <button class="crud edit" onclick="button('update')"><i class="fas fa-edit"></i></button>
+      <button class="crud filter" onclick="button('filters')"><i class="fas fa-filter"></i></button>
+      <button class="crud log" onclick="logOut()"><i class="fas fa-sign-out-alt"></i></button>
 </div>    
 </nav>
-    <div id="add">
-      <button class="crud add" onclick="button('added')">Add Product</button>
-      <button class="crud edit" onclick="button('update')">Edit Product</button>
-      <button class="crud filter" onclick="button('filters')">Filters</button>
-    </div>
+    
     <div id="filters">
         <button onclick="productFilter('All')" class="items">All</button>
         <button onclick="productFilter('HardDrive')" class="items">HardDrive</button>

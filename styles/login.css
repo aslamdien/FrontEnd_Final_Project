@@ -139,10 +139,31 @@ a {
   font-size: 5vh;
 }
 }
+
+@media screen and (max-width: 414px){
+  #name{
+    font-size: 3.5vh;
+  }
+  #profile{
+    left:10%;
+  }
+    
+}
+
 @media screen and (max-width: 400px){
   #name{
     font-size: 4.5vh;
   }
+}
+
+@media screen and (max-width: 384px){
+  #name{
+    font-size: 4vh;
+  }
+  #profile{
+    left:10%;
+  }
+    
 }
 
 @media screen and (max-width: 375px){
@@ -156,9 +177,6 @@ a {
 }
 
 @media screen and (max-width: 360px){
-  #name{
-    font-size: 4vh;
-  }
   .form{
     padding: 40px;
   }

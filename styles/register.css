@@ -140,6 +140,14 @@ text-decoration-line:underline ;
 color: red;
 text-decoration-line:underline ;
 }
+
+@media screen and (max-width: 1024px){
+  #title{
+    font-size: 3.5vh;
+  }
+}
+
+
 @media screen and (max-width: 800px){
   #title{
     font-size: 3.5vh;
@@ -164,6 +172,13 @@ text-decoration-line:underline ;
   font-size: 5vh;
 }
 }
+
+@media screen and (max-width: 480px){
+  #title{
+    font-size: 3.5vh;
+  }
+}
+
 @media screen and (max-width: 455px){
   #title{
     font-size: 4.5vh;

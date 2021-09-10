@@ -144,6 +144,17 @@ a {
     font-size: 4.5vh;
   }
 }
+
+@media screen and (max-width: 375px){
+  #name{
+    font-size: 3vh;
+  }
+  #profile{
+    left:10%;
+  }
+    
+}
+
 @media screen and (max-width: 360px){
   #name{
     font-size: 4vh;

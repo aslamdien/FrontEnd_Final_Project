@@ -152,7 +152,22 @@ body {
 
 .btns {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 22px;
+}
+
+.log{
+  background: none;
+  border: none;
+  color: white;
+  font-size: 4vh;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+.log:hover{
+  color: black;
 }
 
 .back {
@@ -234,6 +249,8 @@ body {
 visibility: visible;
 height: 35vh;
 }
+
+
 @media screen and (max-width: 1280px) {
   .items{
     font-size: 2vh;

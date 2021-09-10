@@ -498,6 +498,9 @@ margin-top: 17px;
     
 }
 @media screen and (max-width: 415px){
+  #name{
+    font-size: 4.5vh;
+  }
   #profile{
     left:17%;
   }
@@ -526,6 +529,9 @@ margin-top: 17px;
 }
 
 @media screen and (max-width: 375px){
+  #name{
+    font-size: 4vh;
+  }
   #profile{
     left:10%;
   }

@@ -28,10 +28,10 @@ function login(){
         if (!res.data) {
             document.querySelector('#error').innerHTML='<strong><i class="fas fa-exclamation-circle"></i> Incorrect Username Or Password</strong>';
         }
-        // else if(username == 'aslamdien90'){
-        //     localStorage.setItem('admin', JSON.stringify(res));
-        //     window.location = './admin.html'
-        // }
+        else if(username == 'aslamdien90'){
+            localStorage.setItem('admin', JSON.stringify(res));
+            window.location = './admin.html'
+        }
         else{
             localStorage.setItem("user", JSON.stringify(res));
             window.location = './product.html'

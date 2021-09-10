@@ -1,373 +1,411 @@
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    display: flex;
-    flex-direction: column;   
-    justify-content: center;
-    padding-top: 5%;
-    background: url(../images/home-HF_GA-1920x1080-CYBERSECU.gif) fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 5%;
+  background: url(../images/home-HF_GA-1920x1080-CYBERSECU.gif) fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.heading{
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    display: flex;
-    justify-content: space-between;
-    background: rgba(132, 156, 190, 0.589);
-    backdrop-filter: blur( 4px );
-    -webkit-backdrop-filter: blur( 4px );
-    max-height: 7vh;
-    min-height: 3vh;
-    padding: 2%;
-    align-items: center;
+.heading {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  background: rgba(132, 156, 190, 0.589);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  max-height: 7vh;
+  min-height: 3vh;
+  padding: 2%;
+  align-items: center;
 }
 
-#filters{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 5px;
-    height: 0;
-    overflow: hidden;
-    transition: all 0.3s linear
+#filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s linear;
 }
 
-#filters.active{
-    height: 5vh;
+#filters.active {
+  height: 5vh;
 }
 
-.show-items{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 5% 10%;
-    gap: 10px;
+.show-items {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 5% 10%;
+  gap: 10px;
 }
 
-#greeting{
-    color: white;
-    font-size: 4vh;
+#greeting {
+  color: white;
+  font-size: 4vh;
 }
 
-.container{
-    min-width: 20vh;
-    max-width: 38vh;
-    max-height: 60vh;
-    min-height: 30vh;
-    background: url(../images/depositphotos_116451478-stock-illustration-vector-futuristic-technology-background-3d.jpg);
-    flex-direction: column;
-    background-size: cover;
-    display: flex;
-    overflow: hidden;
-    border: 1px solid;
-    padding: 5px;
-    gap:4px;
+.container {
+  min-width: 20vh;
+  max-width: 38vh;
+  max-height: 60vh;
+  min-height: 30vh;
+  background: url(../images/depositphotos_116451478-stock-illustration-vector-futuristic-technology-background-3d.jpg);
+  flex-direction: column;
+  background-size: cover;
+  display: flex;
+  overflow: hidden;
+  border: 1px solid;
+  padding: 5px;
+  gap: 4px;
 }
-#name{
-    font-family: 'Audiowide', cursive;
-    color: white;
-    font-size: 7vh;
+#name {
+  font-family: "Audiowide", cursive;
+  color: white;
+  font-size: 7vh;
 }
 
-.image{
-    min-height: 20vh;
-    max-height: 35vh;
-    max-width: 40vh;
-    min-width: 20vh;
+.image {
+  min-height: 20vh;
+  max-height: 35vh;
+  max-width: 40vh;
+  min-width: 20vh;
 }
 
 #added {
-    flex-wrap: wrap;
-    position: fixed;
-    top:20%;
-    left: 38%;
-    overflow: hidden;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    align-items: center;
-    border:none;
-    border-radius: 20px;
-background: #ff0000;
-box-shadow: inset 20px 20px 60px #d90000,
-            inset -20px -20px 60px #ff0000;
-    width: 0;
-    height: 0;
-    z-index: 10;
-    transition: all 0.3s linear;
+  flex-wrap: wrap;
+  position: fixed;
+  top: 20%;
+  left: 38%;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 20px;
+  background: #ff0000;
+  box-shadow: inset 20px 20px 60px #d90000, inset -20px -20px 60px #ff0000;
+  width: 0;
+  height: 0;
+  transition: all 0.3s linear;
 }
-  
+
 #added.active {
-    width: 44vh;
-    height: 70vh;
-    padding: 10px;
-    border: 2px solid white;
+  width: 44vh;
+  height: 70vh;
+  padding: 10px;
+  border: 2px solid white;
 }
 
 #update {
-    flex-wrap: wrap;
-    position: fixed;
-    top:20%;
-    left: 38%;
-    overflow: hidden;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    border-radius: 20px;
-    background: #0062ff;
-    box-shadow: inset 20px 20px 60px #0053d9,
-            inset -20px -20px 60px #0071ff;
-    width: 0;
-    height: 0;
-    z-index: 10;
-    transition: all 0.3s linear;
+  flex-wrap: wrap;
+  position: fixed;
+  top: 20%;
+  left: 38%;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 20px;
+  background: #0062ff;
+  box-shadow: inset 20px 20px 60px #0053d9, inset -20px -20px 60px #0071ff;
+  width: 0;
+  height: 0;
+  transition: all 0.3s linear;
 }
-  
+
 #update.active {
-    width: 44vh;
-    height: 40vh;
-    padding: 10px;
-    border: 2px solid white;
+  width: 44vh;
+  height: 40vh;
+  padding: 10px;
+  border: 2px solid white;
 }
 
-.product-info{
-    height: 5vh;
+.product-info {
+  height: 5vh;
 }
 
-.imageup{
-    height: 40vh;
-    width: 40vh;
+.imageup {
+  height: 40vh;
+  width: 40vh;
 }
 
-#cart{
-    position: fixed;
-    top: 5%;
-    left: 100%;
-    bottom: 0;
-    background-color: yellow;
-    transition: all 0.2 linear;
+#cart {
+  position: fixed;
+  top: 5%;
+  left: 100%;
+  bottom: 0;
+  background-color: yellow;
+  transition: all 0.2 linear;
 }
 
-#cart.active{
-    left: 0;
+#cart.active {
+  left: 0;
 }
 
-.cartbtn{
-    position: fixed;
-    z-index: 100;
+.cartbtn {
+  position: fixed;
+  z-index: 100;
 }
-.foot{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    height: 10vh;
-}
-
-.items{
-    height: 4vh;
-    width: 15vh;
-    border: 1px solid black;
-    border-radius: 50px;
-background: linear-gradient(145deg, #4fcca9, #43ac8e);
-
+.foot {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  height: 10vh;
 }
 
-.items:active{
-background: linear-gradient(145deg, #45b762, #52d975);
+.items {
+  height: 4vh;
+  width: 15vh;
+  border: 1px solid black;
+  border-radius: 50px;
+  background: linear-gradient(145deg, #4fcca9, #43ac8e);
 }
 
-.add{
-border: 1px solid black;
-border-radius: 3px;
-background-color: #ff0000;
-padding: 1px;
+.items:active {
+  background: linear-gradient(145deg, #45b762, #52d975);
 }
 
-.add:active{
-    background: #ff0000;
-box-shadow: inset 20px 20px 60px #d90000,
-            inset -20px -20px 60px #ff0000;
+.add {
+  border: 1px solid black;
+  border-radius: 3px;
+  background-color: #ff0000;
+  padding: 1px;
 }
 
-.edit{
-    border: 1px solid black;
-    border-radius: 3px;
-    background-color: #0062ff;
-    padding: 1px;
+.add:active {
+  background: #ff0000;
+  box-shadow: inset 20px 20px 60px #d90000, inset -20px -20px 60px #ff0000;
 }
 
+.edit {
+  border: 1px solid black;
+  border-radius: 3px;
+  background-color: #0062ff;
+  padding: 1px;
+}
 
-.crud{
-    font-size: 5vh;
-    padding: 3px;
-    cursor: pointer;
+.crud {
+  font-size: 5vh;
+  padding: 3px;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1280px) {
-    .items{
-      font-size: 2vh;
-  
-    }
-
-    #added{
-        top: 11%;
-    left: 40%;
-    }
-
-    #update{
-        top: 11%;
-    left: 40%;
-    }
+  .items {
+    font-size: 2vh;
   }
 
-@media screen and (max-width:890px){
-    #added{
-        top: 11%;
-    left: 34%;
-    }
+  #added {
+    top: 11%;
+    left: 40%;
+  }
 
-    #update{
-        top: 11%;
-    left: 34%;
-    }
-}
-@media screen and (max-width: 815px){
-#greeting{
- font-size: 3.5vh;
+  #update {
+    top: 11%;
+    left: 40%;
+  }
 }
 
-#name{
+@media screen and (max-width: 890px) {
+  #added {
+    top: 11%;
+    left: 34%;
+  }
+
+  #update {
+    top: 11%;
+    left: 34%;
+  }
+}
+@media screen and (max-width: 815px) {
+  #greeting {
+    font-size: 3.5vh;
+  }
+
+  #name {
     font-size: 6.5vh;
-}
+  }
 
-.crud{
+  .crud {
     font-size: 4.5vh;
     padding: 2.5px;
+  }
+}
+@media screen and (max-width: 800px) {
+  #filters {
+    margin-top: 5px;
+  }
 }
 
+@media screen and (max-width: 775px) {
+  #filters {
+    margin-top: 10px;
+  }
 }
-@media screen and (max-width: 800px){
-    #filters{
-      margin-top: 5px;
-    }
+@media screen and (max-width: 740px) {
+  #filters {
+    margin-top: 17px;
+  }
 }
 
-@media screen and (max-width: 775px){
-    #filters{
-      margin-top: 10px;
-    }
-      
-    }
-    @media screen and (max-width: 740px){
-        #filters{
-      margin-top: 17px;
-        }
-      }
+@media screen and (max-width: 700px) {
+  #greeting {
+    font-size: 3vh;
+  }
 
-@media screen and (max-width: 700px){
-    #greeting{
-     font-size: 3vh;
-    }
-    
-    #name{
-        font-size: 6vh;
-    }
-    
-    .crud{
-        font-size: 4vh;
-        padding: 2.5px;
-    }
-    
-    }
+  #name {
+    font-size: 6vh;
+  }
 
-    @media screen and (max-width: 640px){
-        #greeting{
-         display: none;
-        }
-        
+  .crud {
+    font-size: 4vh;
+    padding: 2.5px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  #greeting {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 600px) {
-    #added{
-        top: 11%;
+  #added {
+    top: 11%;
     left: 30%;
-    }
-
-    #update{
-        top: 11%;
-    left: 30%;
-    }
-}
-@media screen and (max-width: 537px){
-
-    #filters{
-      margin-top: 20px;
-    }
-    #filters.active{
-      height: 10vh;
-    }
-
-    #added{
-        top: 11%;
-    left: 25%;
-    }
-
-    #update{
-        top: 11%;
-    left: 25%;
-    }
-      
   }
 
-   
-@media screen and (max-width: 425px){
-    .heading{
-        flex-direction: column;
-        max-height: 18vh;
-    }
-      
-    #filters{
-      margin-top: 90px;
-    }
-    #added{
-    top: 20%;
-    left: 20%;
-    }
-
-    #update{
-    top: 20%;
-    left: 20%;
-    }
-
-}
-
-@media screen and (max-width: 400){
-    #added{
-    left: 15%;
-    }
-
-    #update{
-    left: 15%;
-    }
-}
-
-@media screen and (max-width: 268px){
-    #filters.active{
-      height: 15vh;
-    }
+  #update {
+    top: 11%;
+    left: 30%;
   }
+}
+@media screen and (max-width: 537px) {
+  #filters {
+    margin-top: 20px;
+  }
+  #filters.active {
+    height: 10vh;
+  }
+
+  #added {
+    top: 11%;
+    left: 25%;
+  }
+
+  #update {
+    top: 11%;
+    left: 25%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .heading {
+    flex-direction: column;
+    max-height: 18vh;
+  }
+
+  #filters {
+    margin-top: 90px;
+  }
+  #added {
+    top: 20%;
+    left: 20%;
+  }
+
+  #update {
+    top: 20%;
+    left: 20%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #added {
+    left: 15%;
+  }
+
+  #update {
+    left: 15%;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  #added {
+    left: 13%;
+  }
+
+  #update {
+    left: 13%;
+  }
+}
+@media screen and (max-width: 320px) {
+  #added {
+    left: 12%;
+  }
+
+  #update {
+    left: 12%;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  #added {
+    left: 10%;
+  }
+
+  #update {
+    left: 10%;
+  }
+}
+
+@media screen and (max-width: 290px) {
+  #added {
+    left: 5%;
+  }
+
+  #update {
+    left: 5%;
+  }
+}
+
+@media screen and (max-width: 268px) {
+  #filters.active {
+    height: 15vh;
+  }
+  #added {
+    left: 4%;
+  }
+
+  #update {
+    left: 4%;
+  }
+}
+
+@media screen and (max-width: 260px) {
+  #added {
+    left: 2.5%;
+  }
+
+  #update {
+    left: 2.5%;
+  }
+}

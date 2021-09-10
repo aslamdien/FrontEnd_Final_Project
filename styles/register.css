@@ -250,6 +250,14 @@ padding: 30px;
   }
 }
 
+@media screen and (max-width: 320px){
+  #title{
+    font-size: 2.5vh;
+  }
+}
+
+
+
 @media screen and (max-width: 315px){
   #title{
     font-size: 3vh;

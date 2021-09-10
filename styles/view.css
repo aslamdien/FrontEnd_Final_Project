@@ -563,6 +563,15 @@ margin-top: 17px;
     
 }
 
+@media screen and (max-width:337px) {
+  #name{
+    font-size: 4vh;
+  }
+  .log{
+    font-size: 3vh;
+}
+}
+
 @media screen and (max-width: 330px){
 .heading{
   flex-direction: column;

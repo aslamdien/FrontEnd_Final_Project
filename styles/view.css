@@ -518,10 +518,17 @@ margin-top: 17px;
     
 }
 
-@media screen and (max-width: 380px){
+@media screen and (max-width: 384px){
   #name{
-    font-size: 4.5vh;
+    font-size: 3.5vh;
   }
+  #profile{
+    left:10%;
+  }
+    
+}
+
+@media screen and (max-width: 380px){
   .btns{
     gap: 10px;
   }

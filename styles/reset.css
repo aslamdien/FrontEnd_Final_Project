@@ -137,6 +137,7 @@ body {
     }
   }
 
+  
   @media screen and (max-width: 590px){
     #title {
       font-size: 5.5vh;
@@ -146,6 +147,10 @@ body {
   @media screen and (max-width: 560px){
     #title {
       font-size: 5vh;
+    }
+    
+    #sub {
+      font-size: 4.5vh;
     }
   }
   
@@ -165,10 +170,16 @@ body {
     }
   }
 
-  @media screen and (max-width: 560px){
-    #sub {
-      font-size: 4.5vh;
+  
+  
+  @media screen and (max-width: 384px){
+    #title{
+      font-size: 3vh;
     }
+    #profile{
+      left:10%;
+    }
+      
   }
 
   @media screen and (max-width: 375px){

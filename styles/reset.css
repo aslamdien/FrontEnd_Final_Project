@@ -126,57 +126,63 @@ body {
     gap: 5px;
   }
 
-  @media screen and (max-width: 695px){
+  @media screen and (max-width: 810px){
     #title {
       font-size: 6.5vh;
     }
   }
 
-  @media screen and (max-width: 640px){
+
+  @media screen and (max-width: 740px){
     #title {
       font-size: 6vh;
     }
   }
 
-  
-  @media screen and (max-width: 590px){
+  @media screen and (max-width: 700px){
     #title {
       font-size: 5.5vh;
     }
   }
 
-  @media screen and (max-width: 560px){
+  @media screen and (max-width: 640px){
     #title {
       font-size: 5vh;
     }
-    
+  }
+
+  @media screen and (max-width: 580px){
+    #title {
+      font-size: 4.5vh;
+    }
+  }
+
+  @media screen and (max-width: 560px){
     #sub {
       font-size: 4.5vh;
     }
   }
   
-  @media screen and (max-width: 490px) {
+  @media screen and (max-width: 515px) {
   #title{
-    font-size: 4.5vh;
+    font-size: 4vh;
   }
   }
-  @media screen and (max-width: 440px){
+  @media screen and (max-width: 470px){
     #title{
-      font-size: 4vh;
-    }
-  }
-  @media screen and (max-width: 390px){
-    #title {
       font-size: 3.5vh;
     }
-  }
-
+  } 
   
-  
-  @media screen and (max-width: 384px){
+  @media screen and (max-width: 410px){
     #title{
       font-size: 3vh;
     }
+
+    #sub{
+      font-size: 3.5vh;
+    }
+
     #profile{
       left:10%;
     }
@@ -194,9 +200,6 @@ body {
   }
 
   @media screen and (max-width: 360px){
-    #title{
-      font-size: 3.5vh;
-    }
     .form{
       padding: 40px;
     }
@@ -205,7 +208,7 @@ body {
   @media screen and (max-width: 350px){
 
   #title{
-      font-size: 3vh;
+      font-size: 2.5vh;
     }
   .form{
   padding: 30px;
@@ -222,13 +225,6 @@ body {
   }
   
   @media screen and (max-width: 330px){
-    #title{
-      font-size: 3vh;
-    }
-  
-    #sub{
-      font-size: 4vh;
-    }
     .show{
       font-size: 15px;
     }
@@ -246,18 +242,15 @@ body {
     }
   }
 
-  @media screen and (max-width: 295px){
-    #title{
-      font-size: 2.5vh;
+  @media screen and (max-width: 300px){
+    #sub{
+      font-size: 3vh;
     }
+  }
   
   @media screen and (max-width: 285px){
-    #title{
-      font-size: 2.5vh;
-    }
-  
     #sub{
-      font-size: 4vh;
+      font-size: 3vh;
     }
     .show{
       font-size: 13px;

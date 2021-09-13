@@ -176,6 +176,7 @@ function updateProduct(id) {
     let updateProduct = products.find((item) => {
       return item.id == id
     })
+  console.log(updateProduct)
   let title = document.querySelector('#title1').value
   let price = document.querySelector('#price1').value
   let type = document.querySelector('#type1').value

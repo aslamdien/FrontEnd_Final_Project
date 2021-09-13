@@ -93,7 +93,7 @@ body {
   cursor: pointer;
 }
 
-.btn:active{
+.btn:active {
   color: black;
   background: white;
 }
@@ -114,230 +114,176 @@ body {
 }
 
 a {
-    color: white;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
+  color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 }
 
-.showpass{
+.showpass {
   display: flex;
   align-items: center;
+  gap: 5px;
 }
 
-#email-er{
+#email-er {
   color: red;
-  text-decoration-line:underline ;
-font-weight: bolder;
+  text-decoration-line: underline;
+  font-weight: bolder;
 }
 
-.id-er{
-color: red;
-text-decoration-line:underline ;
-
+.id-er {
+  color: red;
+  text-decoration-line: underline;
 }
 
-.user-er{
-color: red;
-text-decoration-line:underline ;
+.user-er {
+  color: red;
+  text-decoration-line: underline;
 }
 
-@media screen and (max-width: 1024px){
-  #title{
-    font-size: 3.5vh;
-  }
-}
-
-
-@media screen and (max-width: 800px){
-  #title{
-    font-size: 3.5vh;
-  }
-}
-
-
-@media screen and (max-width: 626px){
+@media screen and (max-width: 1024px) {
   #title {
-    font-size: 6vh;
-  }
-}
-@media screen and (max-width: 600px){
-  #title{
-    font-size: 3vh;
+    font-size: 5vh;
   }
 }
 
-
-@media screen and (max-width: 545px) {
-#title{
-  font-size: 5vh;
-}
-}
-
-@media screen and (max-width: 480px){
-  #title{
-    font-size: 3.5vh;
-  }
-}
-
-@media screen and (max-width: 455px){
-  #title{
-    font-size: 4.5vh;
-  }
-}
-
-@media screen and (max-width: 412px){
-  #title{
-    font-size: 3.5vh;
-  }
-}
-
-@media screen and (max-width: 411px){
-  #title{
-    font-size: 3vh;
-  }
-}
-
-
-
-@media screen and (max-width: 405px){
-  #title{
+@media screen and (max-width: 600px) {
+  #title {
     font-size: 4vh;
   }
-  .form{
+}
+
+@media screen and (max-width: 484px) {
+  #title {
+    font-size: 3.5vh;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #title {
+    font-size: 3vh;
+  }
+}
+
+@media screen and (max-width: 405px) {
+  .form {
     padding: 40px;
   }
 }
 
-@media screen and (max-width: 384px){
-  #title{
-    font-size: 3.5vh;
+@media screen and (max-width: 384px) {
+  #profile {
+    left: 10%;
   }
-  #profile{
-    left:10%;
-  }
-    
 }
 
-@media screen and (max-width: 375px){
-  #title{
+@media screen and (max-width: 375px) {
+  #title {
     font-size: 2.5vh;
   }
-    
 }
 
-@media screen and (max-width: 365px){
-  #title{
-    font-size: 3.5vh;
+@media screen and (max-width: 350px) {
+  .form {
+    padding: 30px;
+  }
+
+  #email-er {
+    font-size: 2.5vh;
+  }
+
+  #id-er {
+    font-size: 2.5vh;
+  }
+
+  #user-er {
+    font-size: 2.5vh;
+  }
+
+  .btn {
+    font-size: 18px;
   }
 }
 
-@media screen and (max-width: 350px){
-.form{
-padding: 30px;
-}
+@media screen and (max-width: 330px) {
 
-#email-er{
-  font-size: 3vh;
-}
-
-#id-er{
-  font-size: 3vh;
-}
-
-#user-er{
-  font-size: 3vh;
-}
-
-.btn{
-  font-size: 18px;
-}
-
-}
-
-@media screen and (max-width: 330px){
-  #title{
-    font-size: 3.5vh;
-  }
-
-  #sub{
+  #sub {
     font-size: 5vh;
   }
-  .show{
+  .show {
     font-size: 15px;
   }
 
-  #email-er{
+  #email-er {
     font-size: 2vh;
   }
 
-  .id-er{
+  .id-er {
     font-size: 2vh;
   }
 
-  .user-er{
+  .user-er {
     font-size: 2vh;
   }
 
-  .info{
+  .info {
     font-size: 15px;
     padding: 5px;
   }
 
-  .btn{
+  .btn {
     font-size: 15px;
   }
 }
 
-@media screen and (max-width: 320px){
-  #title{
+@media screen and (max-width: 320px) {
+  #title {
     font-size: 2.5vh;
   }
 }
 
+@media screen and (max-width: 315px) {
 
-
-@media screen and (max-width: 315px){
-  #title{
-    font-size: 3vh;
-  }
-
-  #sub{
+  #sub {
     font-size: 4vh;
   }
-  .show{
+  .show {
     font-size: 13px;
   }
 
-  .info{
+  .info {
     font-size: 13px;
   }
 
-  .btn{
+  .btn {
     font-size: 13px;
   }
 }
 
-@media screen and (max-width: 245px){
+@media screen and (max-width: 297px){
   #title{
-    font-size: 2.5vh;
+    font-size: 2vh;
   }
+    
+}
 
-  .form{
+@media screen and (max-width: 245px) {
+  .form {
     padding: 20px;
   }
-  
-  #sub{
+
+  #sub {
     font-size: 3.5vh;
   }
-  .show{
+  .show {
     font-size: 10px;
   }
 
-  .info{
+  .info {
     font-size: 10px;
-  } 
-  
-  .btn{
+  }
+
+  .btn {
     font-size: 10px;
   }
 }

@@ -32,10 +32,10 @@ function login() {
           '<strong><i class="fas fa-exclamation-circle"></i> Incorrect Username Or Password</strong>';
       }
 
-      else if(username == 'aslamdien90'){ // For Admin Page (password = 'turbostar1')
-          localStorage.setItem('admin', JSON.stringify(res));
-          window.location = './admin.html'
-      }
+      // else if(username == 'aslamdien90'){ // For Admin Page (password = 'turbostar1')
+      //     localStorage.setItem('admin', JSON.stringify(res));
+      //     window.location = './admin.html'
+      // }
       else {
         // For Product Page
         localStorage.setItem("user", JSON.stringify(res));

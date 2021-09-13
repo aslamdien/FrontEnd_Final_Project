@@ -128,7 +128,12 @@ function checkCart() {
   if (InCart == null) {
     // If empty display '0' or none
     addTocart();
-  } else {
+  } 
+  else if(InCart == 0) {
+    container.style.display = 'none'
+  }
+  else {
+    container.style.display = 'inline';
     container.innerHTML = InCart;
   }
 }
